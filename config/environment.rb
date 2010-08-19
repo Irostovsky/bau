@@ -21,7 +21,7 @@ Rails::Initializer.run do |config|
   # config.gem "aws-s3", :lib => "aws/s3"
 
   config.gem 'warden'
-  config.gem 'devise', :version => '1.0.8'
+  config.gem 'devise', :version => '1.0.7'
   
 
 

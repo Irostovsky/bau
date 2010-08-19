@@ -33,3 +33,15 @@ img {
   text-align: center;
   padding-top: 10px;
 }
+
+.success_note{
+  color: green;
+}
+
+.error_note{
+  color: red;
+}
+
+.admin_top_menu{
+	background-color: yellow;
+}

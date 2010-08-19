@@ -13,4 +13,13 @@ module ApplicationHelper
       end
     end
   end
+  
+  def admin_top_menu
+    if user_signed_in?
+      content_tag :div, :class => 'admin_top_menu' do
+        "Hello, Admin.  " +
+        link_to('Logout', destroy_user_session_path)
+      end
+    end
+  end
 end

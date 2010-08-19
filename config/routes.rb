@@ -11,4 +11,8 @@ ActionController::Routing::Routes.draw do |map|
   
   map.root :controller => "home"
   
+  map.with_options :controller => "admin/home", :action => "index" do |f|
+    f.admin "admin"
+  end
+  
 end

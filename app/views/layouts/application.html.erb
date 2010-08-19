@@ -8,11 +8,15 @@
     <%= stylesheet_link_tag 'application' %>
   </head>
   <body class="<%= yield :body_class %>">
+		<%= admin_top_menu %>
 		<% content_tag :div, :class => 'header' do %>
-		<%= top_menu %>
+			<%= top_menu %>
 		<% end %>		
 		
-     <%= yield %>
+		<%= content_tag :span, flash[:notice], :class => 'success_note' %>
+		<%= content_tag :span, flash[:alert], :class => 'error_note' %>
+		
+    <%= yield %>
 
     <% content_tag :div, :class => 'basement' do %>
       &copy; 2010 BAUkraine
