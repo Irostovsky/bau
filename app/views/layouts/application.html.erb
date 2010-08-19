@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>BAU</title>
+    <%= stylesheet_link_tag 'application' %>
+  </head>
+  <body class="<%= yield :body_class %>">
+		<% content_tag :div, :class => 'header' do %>
+		<%= top_menu %>
+		<% end %>		
+		
+     <%= yield %>
+
+    <% content_tag :div, :class => 'basement' do %>
+      &copy; 2010 BAUkraine
+    <% end %>
+
+    <%= javascript_include_tag "application.js"%>
+  </body>
+</html>
