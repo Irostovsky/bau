@@ -22,7 +22,8 @@ Rails::Initializer.run do |config|
 
   config.gem 'warden'
   config.gem 'devise', :version => '1.0.7'
-  
+  config.gem 'formtastic'
+  config.gem 'validation_reflection'
 
 
   # Only load the plugins named here, in the order given (default is alphabetical).

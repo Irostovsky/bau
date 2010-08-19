@@ -45,3 +45,7 @@ img {
 .admin_top_menu{
 	background-color: yellow;
 }
+
+.login_form{
+	width: 500px;
+}
