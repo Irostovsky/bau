@@ -7,6 +7,7 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :home, :only => :index
   end
   
+  map.devise_for :users
   
   map.root :controller => "home"
   

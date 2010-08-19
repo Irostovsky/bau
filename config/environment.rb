@@ -20,11 +20,9 @@ Rails::Initializer.run do |config|
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
 
-  # config.gem 'warden'
-  # config.gem 'devise'
-  # config.gem 'paperclip', :source => 'http://gemcutter.org'
-  # config.gem 'formtastic' 
-  # config.gem 'nokogiri'
+  config.gem 'warden'
+  config.gem 'devise', :version => '1.0.8'
+  
 
 
   # Only load the plugins named here, in the order given (default is alphabetical).
