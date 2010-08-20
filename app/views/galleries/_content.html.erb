@@ -1,0 +1,11 @@
+<%= link_to 'New gallery', new_gallery_path if user_signed_in? %>
+
+<% @galleries.each do |gallery| %>
+	<% content_tag :div do %>
+    <%= link_to_unless @gallery == gallery, h(gallery.name), gallery %>
+		<% for_admin do %>
+	    <%= link_to image_tag('pencil.png'), edit_gallery_path(gallery) %>
+	    <%= link_to image_tag('delete.png'), gallery, :confirm => 'Are you sure?', :method => :delete %> 
+		<% end -%>
+	<% end -%>
+<% end %>

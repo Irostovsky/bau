@@ -20,6 +20,10 @@ img {
   border: none;
 }
 
+.header{
+	margin-bottom: 20px;
+}
+
 .header a{
 	display: block;
 }
@@ -31,15 +35,17 @@ img {
 
 .basement{
   text-align: center;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 
 .success_note{
   color: green;
+	display: block;
 }
 
 .error_note{
   color: red;
+	display: block;
 }
 
 .admin_top_menu{

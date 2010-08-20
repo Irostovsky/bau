@@ -1,5 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
-  
+
+  map.resources :galleries
   map.resources :home, :only => :index
   map.resources :contacts, :only => :index
   
