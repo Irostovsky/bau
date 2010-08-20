@@ -67,3 +67,7 @@ img {
 .gallery_content{
 	margin-left: 50px;
 }
+
+.gallery_photo{
+	display: block;
+}

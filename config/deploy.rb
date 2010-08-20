@@ -22,10 +22,10 @@ after 'deploy:symlink', 'deploy:shared_data'
 namespace :deploy do
 
   task :shared_data do
-    # shared_avatars_dir = "#{shared_path}/assets"
-    # run "mkdir -p #{shared_avatars_dir}" # make dir if it doesn't exist
-    # run "chown  -R www-data #{shared_avatars_dir}"
-    # run "ln -s #{shared_avatars_dir} #{current_path}/public/assets"
+    shared_avatars_dir = "#{shared_path}/assets"
+    run "mkdir -p #{shared_avatars_dir}" # make dir if it doesn't exist
+    run "chown  -R www-data #{shared_avatars_dir}"
+    run "ln -s #{shared_avatars_dir} #{current_path}/public/assets"
   end
 
   task :restart, :roles => :app do

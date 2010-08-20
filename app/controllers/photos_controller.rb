@@ -25,16 +25,10 @@ class PhotosController < ApplicationController
     end
   end
 
-  # DELETE /photos/1
-  # DELETE /photos/1.xml
   def destroy
     @photo = Photo.find(params[:id])
     @photo.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(photos_url) }
-      format.xml  { head :ok }
-    end
+    redirect_to(gallery_path(@gallery), :notice => 'Photo was successfully deleted.')
   end
   
   private
