@@ -24,6 +24,7 @@ Rails::Initializer.run do |config|
   config.gem 'devise', :version => '1.0.7'
   config.gem 'formtastic'
   config.gem 'validation_reflection'
+  config.gem 'paperclip', :source => 'http://gemcutter.org'
 
 
   # Only load the plugins named here, in the order given (default is alphabetical).
