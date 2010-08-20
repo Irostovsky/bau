@@ -27,7 +27,7 @@
 					<% content_tag :div do %>
 						<%= link_to image_tag(photo.avatar.url(:medium)), "#", :class => 'gallery_photo' %>
 						<% for_admin do %>
-							<%= link_to image_tag('delete.png'), gallery_photo_path(@gallery, photo), :confirm => 'Удалить фотограйию?', :method => :delete %>
+							<%= link_to image_tag('delete.png'), gallery_photo_path(photo.gallery, photo), :confirm => 'Удалить фотограйию?', :method => :delete %>
 						<% end -%>
 					<% end -%>
 				<% end -%>
