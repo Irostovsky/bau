@@ -6,6 +6,7 @@ class GalleriesController < ApplicationController
 
   def index
     @galleries = Gallery.all
+    @photos = Photo.all
   end
 
   def show

@@ -1,5 +1,16 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
+
+  def reset_float
+    content_tag :div, '', :class => 'reset_float'
+  end
+
+  def single_line_container(options={}, &block)
+    concat ( content_tag :div, :class => "single_line_container #{options[:class]}" do
+    concat capture(&block)
+    end)
+    concat reset_float
+  end
   
   def top_menu
     [

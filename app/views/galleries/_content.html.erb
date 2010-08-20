@@ -1,11 +1,31 @@
-<%= link_to 'New gallery', new_gallery_path if user_signed_in? %>
+<% single_line_container do %>
 
-<% @galleries.each do |gallery| %>
 	<% content_tag :div do %>
-    <%= link_to_unless @gallery == gallery, h(gallery.name), gallery %>
+		<%= link_to 'New gallery', new_gallery_path if user_signed_in? %>
+
+		<% @galleries.each do |gallery| %>
+			<% content_tag :div do %>
+		    <%= link_to_unless @gallery == gallery, h(gallery.name), gallery %>
+				<% for_admin do %>
+			    <%= link_to image_tag('pencil.png'), edit_gallery_path(gallery) %>
+			    <%= link_to image_tag('delete.png'), gallery, :confirm => 'Удалить галлерею со всеми фотографиями?', :method => :delete %> 
+				<% end -%>
+			<% end -%>
+		<% end %>
+	<% end -%>
+
+	<% content_tag :div, :class => 'gallery_content' do %>
+
 		<% for_admin do %>
-	    <%= link_to image_tag('pencil.png'), edit_gallery_path(gallery) %>
-	    <%= link_to image_tag('delete.png'), gallery, :confirm => 'Are you sure?', :method => :delete %> 
+			<%= link_to 'Add Photo', new_gallery_photo_path(@gallery) if @gallery %>
+		<% end -%>
+		
+		<% content_tag :div do %>
+			<% photos = @gallery ? @gallery.photos : @photos %>
+			<% photos.each do |photo| %>
+				<%= link_to image_tag(photo.avatar.url(:medium)), "#" %>
+			<% end -%>
 		<% end -%>
 	<% end -%>
-<% end %>
+
+<% end -%>

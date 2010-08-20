@@ -48,10 +48,22 @@ img {
 	display: block;
 }
 
+.reset_float {
+  clear: both;
+}
+
+.single_line_container > * {
+  float: left;
+}
+
 .admin_top_menu{
 	background-color: yellow;
 }
 
 .login_form{
 	width: 500px;
+}
+
+.gallery_content{
+	margin-left: 50px;
 }

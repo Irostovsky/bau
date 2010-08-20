@@ -1,35 +1,11 @@
 class PhotosController < ApplicationController
-  # GET /photos
-  # GET /photos.xml
-  def index
-    @photos = Photo.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @photos }
-    end
-  end
-
-  # GET /photos/1
-  # GET /photos/1.xml
-  def show
-    @photo = Photo.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @photo }
-    end
-  end
-
-  # GET /photos/new
-  # GET /photos/new.xml
+  
+  before_filter :setup_page
+  before_filter :authenticate_user!
+  before_filter :find_gallery
+  
   def new
     @photo = Photo.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @photo }
-    end
   end
 
   # GET /photos/1/edit
@@ -42,30 +18,10 @@ class PhotosController < ApplicationController
   def create
     @photo = Photo.new(params[:photo])
 
-    respond_to do |format|
-      if @photo.save
-        format.html { redirect_to(@photo, :notice => 'Photo was successfully created.') }
-        format.xml  { render :xml => @photo, :status => :created, :location => @photo }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @photo.errors, :status => :unprocessable_entity }
-      end
-    end
-  end
-
-  # PUT /photos/1
-  # PUT /photos/1.xml
-  def update
-    @photo = Photo.find(params[:id])
-
-    respond_to do |format|
-      if @photo.update_attributes(params[:photo])
-        format.html { redirect_to(@photo, :notice => 'Photo was successfully updated.') }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @photo.errors, :status => :unprocessable_entity }
-      end
+    if @gallery.photos << @photo
+      redirect_to(gallery_path(@gallery), :notice => 'Photo was successfully created.')
+    else
+      render :action => "new"
     end
   end
 
@@ -80,4 +36,15 @@ class PhotosController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  private
+  
+  def setup_page
+    @page = :galleries
+  end
+  
+  def find_gallery
+    @gallery = Gallery.find params[:gallery_id]
+  end
+  
 end

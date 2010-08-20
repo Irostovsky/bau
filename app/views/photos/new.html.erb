@@ -1,11 +1,10 @@
-<h1>New photo</h1>
-
-<% form_for(@photo) do |f| %>
+<% semantic_form_for([@gallery, @photo], :html => { :multipart => true }) do |f| %>
   <%= f.error_messages %>
-
-  <p>
-    <%= f.submit 'Create' %>
-  </p>
+	<% f.inputs :title => 'Add Photo' do %>
+		<%= f.input :avatar, :as => :file  %>
+		<%= f.buttons %>
+	<% end -%>
+	
 <% end %>
 
-<%= link_to 'Back', photos_path %>
+<%= link_to 'Back', gallery_path(@gallery) %>

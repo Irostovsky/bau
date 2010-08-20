@@ -1,8 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :photos
 
-
-  map.resources :galleries
+  map.resources :galleries do |gallery|
+    gallery.resources :photos, :only => [:new, :create, :destroy]
+  end
+  
   map.resources :home, :only => :index
   map.resources :contacts, :only => :index
   
