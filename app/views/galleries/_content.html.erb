@@ -26,6 +26,7 @@
 				<% photos.each do |photo| %>
 					<% content_tag :div do %>
 						<%= link_to image_tag(photo.avatar.url(:medium)), "#", :class => 'gallery_photo' %>
+						<%= link_to 'Увеличить', '#', :class => 'jqModal' %>
 						<% for_admin do %>
 							<%= link_to image_tag('delete.png'), gallery_photo_path(photo.gallery, photo), :confirm => 'Удалить фотограйию?', :method => :delete %>
 						<% end -%>
@@ -35,4 +36,8 @@
 		<% end -%>
 	<% end -%>
 
+<% end -%>
+
+<% content_tag :div, :class => "jqmWindow", :id => "show_photo_dialog" do %>
+	Dialog
 <% end -%>
