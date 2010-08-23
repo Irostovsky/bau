@@ -71,3 +71,11 @@ img {
 .gallery_photo{
 	display: block;
 }
+
+.ad-gallery .ad-back{
+	background: url(/images/ad_scroll_back.png) no-repeat scroll 0 22px transparent;
+}
+
+.ad-gallery .ad-forward{
+	background: url(/images/ad_scroll_forward.png) no-repeat scroll 0 22px transparent;
+}

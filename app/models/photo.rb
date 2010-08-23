@@ -2,7 +2,7 @@ class Photo < ActiveRecord::Base
   belongs_to :gallery
   
   has_attached_file :avatar, 
-  :styles => { :thumb => "50>x50", :medium => '200>x200', :big => '600>x600' },
+  :styles => { :thumb => "80x80>", :medium => '200x200>', :big => '600x600>' },
                   :url  => "/assets/galleries/:id/:style/:basename.:extension",
                   :path => ":rails_root/public/assets/galleries/:id/:style/:basename.:extension"
 

@@ -21,9 +21,9 @@
 		<% end -%>
 		
 		<% content_tag :div do %>
-			<% photos = @gallery ? @gallery.photos : @photos %>
+			<% @show_photos = @gallery ? @gallery.photos : @photos %>
 			<% single_line_container do %>
-				<% photos.each do |photo| %>
+				<% @show_photos.each do |photo| %>
 					<% content_tag :div do %>
 						<%= link_to image_tag(photo.avatar.url(:medium)), "#", :class => 'gallery_photo' %>
 						<%= link_to 'Увеличить', '#', :class => 'jqModal' %>
@@ -39,5 +39,22 @@
 <% end -%>
 
 <% content_tag :div, :class => "jqmWindow", :id => "show_photo_dialog" do %>
-	Dialog
+	<div class="ad-gallery">
+	  <div class="ad-image-wrapper">
+	  </div>
+	  <div class="ad-controls">
+	  </div>
+	  <div class="ad-nav">
+	    <div class="ad-thumbs">
+	      <ul class="ad-thumb-list">
+					<% @show_photos.each do |photo| %>
+		        <li>
+	            <%= link_to image_tag(photo.avatar.url(:thumb)), photo.avatar.url(:big) %>
+		        </li>
+					<% end -%>
+	      </ul>
+	    </div>
+	  </div>
+	</div>
 <% end -%>
+
