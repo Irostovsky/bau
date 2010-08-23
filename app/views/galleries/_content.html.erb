@@ -26,7 +26,7 @@
 				<% @show_photos.each do |photo| %>
 					<% content_tag :div do %>
 						<%= link_to image_tag(photo.avatar.url(:medium)), "#", :class => 'gallery_photo' %>
-						<%= link_to 'Увеличить', '#', :class => 'jqModal' %>
+						<%= link_to 'Увеличить', '#', :class => 'jqModal start_gallery', :photo_id => photo.id %>
 						<% for_admin do %>
 							<%= link_to image_tag('delete.png'), gallery_photo_path(photo.gallery, photo), :confirm => 'Удалить фотограйию?', :method => :delete %>
 						<% end -%>
@@ -49,7 +49,7 @@
 	      <ul class="ad-thumb-list">
 					<% @show_photos.each do |photo| %>
 		        <li>
-	            <%= link_to image_tag(photo.avatar.url(:thumb)), photo.avatar.url(:big) %>
+	            <%= link_to image_tag(photo.avatar.url(:thumb)), photo.avatar.url(:big), :id => "photo_#{photo.id}" %>
 		        </li>
 					<% end -%>
 	      </ul>

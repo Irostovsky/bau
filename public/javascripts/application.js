@@ -4,6 +4,7 @@ $(document).ready(function(){
 		$('.ad-thumb-list').css('width', '9000px'); 
 		hash.w.css('width', '700px').show(); 
 	}; 
+	
 	$('#show_photo_dialog').jqm({
 		onShow: myOpen
 	});
@@ -73,4 +74,10 @@ $(document).ready(function(){
       }
     }
   });
+
+	$(".start_gallery").click(function(){
+		$("#photo_"+$(this).attr('photo_id')).click();
+		return true;
+	});
+	
 });
