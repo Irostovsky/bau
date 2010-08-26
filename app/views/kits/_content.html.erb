@@ -20,9 +20,8 @@
 		<% end -%>
 		
 		<% content_tag :div do %>
-			<% @show_products = @kit ? @kit.products : @products %>
 			<% single_line_container do %>
-				<% @show_products.each do |product| %>
+				<% @products.each do |product| %>
 					<% content_tag :div do %>
 						<%= image_tag product.avatar.url(:medium), :class => 'gallery_photo' %>
 						<%= content_tag :div, product.name %>
@@ -36,6 +35,7 @@
 				<% end -%>
 			<% end -%>
 		<% end -%>
+		<%= will_paginate @products %>
 		
 	<% end -%>
 		

@@ -3,14 +3,16 @@ class KitsController < ApplicationController
   before_filter :setup_page
   before_filter :authenticate_user!, :only => [:new, :edit, :update, :create, :destroy]
   
+  
   def index
     @kits = Kit.all
-    @products = Product.all
+    @products = Product.paginate :page => params[:page], :per_page => 6
   end
 
   def show
     @kit = Kit.find(params[:id])
     @kits = Kit.all
+    @products = @kit.products.paginate :page => params[:page], :per_page => 6
   end
 
   def new
