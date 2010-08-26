@@ -20,16 +20,40 @@ img {
   border: none;
 }
 
-.header{
-	margin-bottom: 20px;
+.top_menu{
+	margin: 50px 0 20px 0;
+	background-image: url(/images/back_logo.png);
+	width: 533px;
+	height: 293px;
+	font-family: Century Gothic;
+	color: #111d9c;
+	font-size: 24px;
 }
 
-.header a{
+.top_menu .logo_link{
+	margin: 0 0 0 30px;
+}
+
+.top_menu .top_menu_links{
+	margin-left: 120px;
+}
+
+.top_menu .top_menu_links a{
+	margin-bottom: 5px;
+}
+
+.top_menu a{
 	display: block;
 }
 
-.header .current_page{
-	background-color: yellow;
+.top_menu .current_page{
+	background-color: #F3F019;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 32px;
+	padding: 3px;
+	width: 198px;
+	display: block;
 }
 
 
@@ -54,6 +78,10 @@ img {
 
 .single_line_container > * {
   float: left;
+}
+
+.top_menu{
+	
 }
 
 .admin_top_menu{

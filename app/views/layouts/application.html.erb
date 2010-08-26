@@ -14,8 +14,11 @@
   </head>
   <body class="<%= yield :body_class %>">
 		<%= admin_top_menu %>
-		<% content_tag :div, :class => 'header' do %>
-			<%= top_menu %>
+		<% content_tag :div, :class => 'top_menu' do %>
+			<% single_line_container do %>
+				<%= link_to image_tag("logo.png"), root_path, :class => 'logo_link' %>
+				<%= content_tag :div, top_menu, :class => 'top_menu_links' %>
+			<% end %>		
 		<% end %>		
 		
 		<%= content_tag :span, flash[:notice], :class => 'success_note' %>
