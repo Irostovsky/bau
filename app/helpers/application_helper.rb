@@ -16,7 +16,8 @@ module ApplicationHelper
     [
       {:name => :home, :path => home_index_path, :title => 'Главная'},
       {:name => :contacts, :path => contacts_path, :title => 'Контакты'},
-      {:name => :galleries, :path => galleries_path, :title => 'Галерея'}
+      {:name => :galleries, :path => galleries_path, :title => 'Галерея'},
+      {:name => :kits, :path => kits_path, :title => 'Снаряжение'}
     ].map do |h|
       if @page == h[:name]
         content_tag(:span, h[:title], :class => 'current_page') 

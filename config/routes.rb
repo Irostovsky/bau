@@ -1,5 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
 
+  map.resources :kits
+
   map.resources :galleries do |gallery|
     gallery.resources :photos, :only => [:new, :create, :destroy]
   end

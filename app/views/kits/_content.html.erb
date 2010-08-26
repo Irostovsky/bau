@@ -1,0 +1,22 @@
+<% single_line_container do %>
+
+	<% content_tag :div do %>
+		<%= link_to 'New kit', new_kit_path if user_signed_in? %>
+
+		<% @kits.each do |kit| %>
+			<% content_tag :div do %>
+		    <%= link_to_unless @kit == kit, h(kit.name), kit %>
+				<% for_admin do %>
+			    <%= link_to image_tag('pencil.png'), edit_kit_path(kit) %>
+			    <%= link_to image_tag('delete.png'), kit, :confirm => 'Удалить снаряжение со всеми товарами?', :method => :delete %> 
+				<% end -%>
+			<% end -%>
+		<% end %>
+	<% end -%>
+
+	<% content_tag :div, :class => 'gallery_content' do %>
+	<% end -%>
+
+
+<% end -%>
+
