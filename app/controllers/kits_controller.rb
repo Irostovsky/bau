@@ -5,12 +5,12 @@ class KitsController < ApplicationController
   
   def index
     @kits = Kit.all
+    @products = Product.all
   end
 
   def show
     @kit = Kit.find(params[:id])
     @kits = Kit.all
-    
   end
 
   def new
