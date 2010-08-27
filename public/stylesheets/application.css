@@ -176,6 +176,7 @@ img {
 
 .home .content{
 	width: 900px;
+	height: 219px;
 }
 
 .home .content div,
@@ -183,10 +184,10 @@ img {
 	text-indent: 20px;
 } 
 
-.home .basement{
+/*.home .basement{
 	margin-top: 30px;
 }
-
+*/
 .login_form{
 	width: 500px;
 }
