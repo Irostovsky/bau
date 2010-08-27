@@ -14,20 +14,32 @@
   </head>
   <body class="<%= yield :body_class %>">
 		<%= admin_top_menu %>
-		<% content_tag :div, :class => 'top_menu' do %>
-			<% single_line_container do %>
-				<%= link_to image_tag("logo.png"), root_path, :class => 'logo_link' %>
-				<%= content_tag :div, top_menu, :class => 'top_menu_links' %>
-			<% end %>		
-		<% end %>		
+		<% single_line_container do %>
+			<% content_tag :div, :class => 'top_menu' do %>
+				<% single_line_container do %>
+					<%= link_to image_tag("logo.png"), root_path, :class => 'logo_link' %>
+					<%= content_tag :div, top_menu, :class => 'top_menu_links' %>
+				<% end %>		
+			<% end %>
+			<% content_tag :div, :class => "top_info" do %>
+				<%=  yield :top_info %>
+			<% end -%>
+		<% end -%>		
 		
-		<%= content_tag :span, flash[:notice], :class => 'success_note' %>
-		<%= content_tag :span, flash[:alert], :class => 'error_note' %>
+		<% single_line_container do %>
+			
+			<% left_hi_image =  yield(:left_hi) || 'wish_health.png' %>
+			<%= image_tag left_hi_image, :class => 'left_hi' %>
 		
-    <%= yield %>
+			<% content_tag :div, :class => 'content' do %>
+				<%= content_tag :span, flash[:notice], :class => 'success_note' %>
+				<%= content_tag :span, flash[:alert], :class => 'error_note' %>
+		    <%= yield %>
+			<% end -%>
+		<% end -%>
 
     <% content_tag :div, :class => 'basement' do %>
-      &copy; 2010 BAUkraine
+			<%= content_tag :div, 'BAUkraine.com', :class => 'line' %>
     <% end %>
 
     <%= render "layouts/include_all_jquery" %>
