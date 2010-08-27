@@ -40,6 +40,17 @@
 
     <% content_tag :div, :class => 'basement' do %>
 			<%= content_tag :div, 'BAUkraine.com', :class => 'line' %>
+			<%= content_tag :div, bottom_menu, :class => 'bottom_menu' %>
+			<% single_line_container :class => 'contacts' do %>
+				<% content_tag :div, :class => 'address' do %>
+					<%= content_tag :div, '83102, г. Донецк' %>
+					<%= content_tag :div, 'ул. Стадионная, 1 "О"' %>
+				<% end -%>
+				<% content_tag :div, :class => 'phone_email' do %>
+					<%= content_tag :div, 'тел: (066) 66-11-980, тел/факс: (062) 385-10-28' %>
+					<%= content_tag :div, 'e-mail: BAUkraine@mail.ru' %>
+				<% end -%>
+			<% end -%>
     <% end %>
 
     <%= render "layouts/include_all_jquery" %>

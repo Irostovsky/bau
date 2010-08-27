@@ -11,19 +11,29 @@ module ApplicationHelper
     end)
     concat reset_float
   end
-  
-  def top_menu
+
+  def top_menu_data
     [
       {:name => :home, :path => home_index_path, :title => 'Главная'},
       {:name => :contacts, :path => contacts_path, :title => 'Контакты'},
       {:name => :galleries, :path => galleries_path, :title => 'Галерея'},
       {:name => :kits, :path => kits_path, :title => 'Снаряжение'}
-    ].map do |h|
+    ]
+  end
+  
+  def top_menu
+    top_menu_data.map do |h|
       if @page == h[:name]
         content_tag(:span, h[:title], :class => 'current_page') 
       else
         link_to h[:title], h[:path] 
       end
+    end
+  end
+  
+  def bottom_menu
+    top_menu_data.map do |h|
+      link_to h[:title], h[:path] 
     end
   end
   
