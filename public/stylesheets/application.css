@@ -41,13 +41,17 @@ img {
 	font-size: 24px;
 }
 
+.top_menu a{
+	color: #29039B;
+}
+
 .top_menu .logo_link{
 	margin: 0 0 0 30px;
 }
 
 .top_menu .top_menu_links{
 	margin-top: 40px;
-	margin-left: 120px;
+	margin-left: 118px;
 }
 
 .top_menu .top_menu_links a{
@@ -64,7 +68,7 @@ img {
 	font-weight: bold;
 	font-size: 32px;
 	padding: 0 6px 6px;
-	width: 198px;
+	width: 201px;
 	display: block;
 	margin-left: -7px;
 }

@@ -10,6 +10,9 @@ ActionController::Routing::Routes.draw do |map|
   
   map.resources :home, :only => :index
   map.resources :contacts, :only => :index
+  map.resources :description, :only => :index
+  map.resources :education, :only => :index
+  map.resources :service, :only => :index
   
   map.namespace :admin do |admin|
     admin.resources :home, :only => :index
