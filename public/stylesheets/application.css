@@ -38,7 +38,7 @@ img {
 	height: 293px;
 	font-family: Century Gothic;
 	color: #111d9c;
-	font-size: 24px;
+	font-size: 23px;
 }
 
 .top_menu a{
@@ -50,12 +50,12 @@ img {
 }
 
 .top_menu .top_menu_links{
-	margin-top: 40px;
+	margin-top: 35px;
 	margin-left: 118px;
 }
 
 .top_menu .top_menu_links a{
-	margin-bottom: 5px;
+	margin-bottom: 3px;
 }
 
 .top_menu a{
