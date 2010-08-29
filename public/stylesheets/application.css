@@ -35,6 +35,23 @@ img {
 a{
 	color: #29039B;
 }
+
+.pagination{
+	text-align: center;
+	font-family: Tahoma;
+}
+
+.pagination > *{
+	margin-left: 10px;
+}
+
+.pagination .current{
+	padding: 3px;
+	background-color:#F9F919;
+	font-size: 20px;
+	color: #FFF;
+	font-width: bold;
+}
 /******************************************************* TOP MENU ************************************************/
 
 .top_menu{
