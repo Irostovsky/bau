@@ -6,7 +6,7 @@ class GalleriesController < ApplicationController
 
   def index
     @galleries = Gallery.all
-    @photos = Photo.all
+    @photos = @galleries.map{|g| g.photos.slice(0, 2)}.flatten
   end
 
   def show
