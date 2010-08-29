@@ -80,6 +80,10 @@ img {
 	width: 707px;
 }
 
+.top_info .default_img{
+	margin-top: 10px;
+}
+
 .success_note{
   color: green;
 	display: block;
@@ -188,10 +192,28 @@ img {
 	text-indent: 20px;
 } 
 
-/*.home .basement{
-	margin-top: 30px;
+/*************************************KIT******************************************************************/
+
+.kit_content .top_info{
+	position: relative;
 }
-*/
+
+.kit_content .top_info .gun_men{
+	width: 289px;
+	height: 371px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.kit_content .phones span{
+	display: block;
+}
+
+
+
+
+
 .login_form{
 	width: 500px;
 }

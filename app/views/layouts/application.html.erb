@@ -22,7 +22,7 @@
 				<% end %>		
 			<% end %>
 			<% content_tag :div, :class => "top_info" do %>
-				<%=  yield :top_info %>
+				<%=  yield(:top_info) || image_tag('boys_and_car.png', :class => 'default_img') %>
 			<% end -%>
 		<% end -%>		
 		

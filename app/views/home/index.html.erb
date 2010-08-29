@@ -1,11 +1,6 @@
 <%= content_for :body_class, "home" %>
 <% content_for :top_info do %>
-	<% content_tag :div, :class => 'phones' do %>
-		<% content_tag :div do %> 
-			Телефон для справок: <%= content_tag :span, "(066) 66-11-980, (062) 385-10-28" %> 
-		<% end -%>
-		<%= content_tag :div, "Звоните нам с 9.00. до 18.00" %> 
-	<% end -%>
+	<%= render :partial => '/layouts/phones' %>
 	<%= image_tag "men_with_case.png", :class => 'men_with_case_img' %>
 <% end -%>
 
