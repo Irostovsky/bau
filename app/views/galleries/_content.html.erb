@@ -1,11 +1,16 @@
+<%= content_for :body_class, " gallery_content " %>
+
+<%= content_for :left_hi, 'attention.png' %>
+
 <% single_line_container do %>
 
-	<% content_tag :div do %>
+	<% content_tag :div, :class => 'left_menu' do %>
 		<%= link_to 'New gallery', new_gallery_path if user_signed_in? %>
-
+		
+		<%= content_tag :div, 'Архив:', :class => 'legend' %>
 		<% @galleries.each do |gallery| %>
-			<% content_tag :div do %>
-		    <%= link_to_unless @gallery == gallery, h(gallery.name), gallery %>
+			<% content_tag :div, :class => 'item' do %>
+		    <%= link_to_unless(@gallery == gallery, h(gallery.name), gallery){"- #{h(gallery.name)}"} %>
 				<% for_admin do %>
 			    <%= link_to image_tag('pencil.png'), edit_gallery_path(gallery) %>
 			    <%= link_to image_tag('delete.png'), gallery, :confirm => 'Удалить галлерею со всеми фотографиями?', :method => :delete %> 
@@ -14,47 +19,9 @@
 		<% end %>
 	<% end -%>
 
-	<% content_tag :div, :class => 'gallery_content' do %>
-
-		<% for_admin do %>
-			<%= link_to 'Add Photo', new_gallery_photo_path(@gallery) if @gallery %>
-		<% end -%>
-		
-		<% content_tag :div do %>
-			<% @show_photos = @gallery ? @gallery.photos : @photos %>
-			<% single_line_container do %>
-				<% @show_photos.each do |photo| %>
-					<% content_tag :div do %>
-						<%= link_to image_tag(photo.avatar.url(:medium)), "#", :class => 'gallery_photo' %>
-						<%= link_to 'Увеличить', '#', :class => 'jqModal start_gallery', :photo_id => photo.id %>
-						<% for_admin do %>
-							<%= link_to image_tag('delete.png'), gallery_photo_path(photo.gallery, photo), :confirm => 'Удалить фотограйию?', :method => :delete %>
-						<% end -%>
-					<% end -%>
-				<% end -%>
-			<% end -%>
-		<% end -%>
+	<% content_tag :div do %>
+		<%= yield :gallery_content %>
 	<% end -%>
 
-<% end -%>
-
-<% content_tag :div, :class => "jqmWindow", :id => "show_photo_dialog" do %>
-	<div class="ad-gallery">
-	  <div class="ad-image-wrapper">
-	  </div>
-	  <div class="ad-controls">
-	  </div>
-	  <div class="ad-nav">
-	    <div class="ad-thumbs">
-	      <ul class="ad-thumb-list">
-					<% @show_photos.each do |photo| %>
-		        <li>
-	            <%= link_to image_tag(photo.avatar.url(:thumb)), photo.avatar.url(:big), :id => "photo_#{photo.id}" %>
-		        </li>
-					<% end -%>
-	      </ul>
-	    </div>
-	  </div>
-	</div>
 <% end -%>
 

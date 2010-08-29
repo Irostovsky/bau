@@ -212,6 +212,16 @@ a{
 	text-indent: 20px;
 } 
 
+/******************************CONTNENT************************************/
+.left_menu{
+	width: 300px;
+/*	border: 1px solid red;*/
+}
+
+.left_menu .item{
+	margin: 3px 0;
+}
+
 
 /*************************************KIT******************************************************************/
 
@@ -235,14 +245,6 @@ a{
 	margin-left: 20px;
 }
 
-.kit_content .left_menu{
-	width: 300px;
-/*	border: 1px solid red;*/
-}
-
-.kit_content .left_menu .item{
-	margin: 3px 0;
-}
 
 .kit_content .products{
 	width: 860px;
@@ -278,16 +280,36 @@ a{
 	font-size: 16px;
 }
 
-.login_form{
-	width: 500px;
+/***********************************GALLERY************************/
+
+.gallery_content .legend{
+	font-weight: bold;
+	margin-bottom: 10px;
 }
 
-.gallery_content{
-	margin-left: 50px;
+.gallery_content .photos{
+	width: 860px;
+	font-family: Tahoma;
+	font-size: 14px;
 }
 
-.gallery_photo{
-	display: block;
+.gallery_content .photos .item{
+	width: 29%;
+	margin-bottom: 30px;
+	margin-right: 3%;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+	vertical-align: top;
+}
+
+.gallery_content .photos .item .date{
+	margin-top: 10px;
+}
+
+.gallery_content .photos .item .name{
+	font-weight: bold;
+	font-size: 16px;
 }
 
 .ad-gallery .ad-back{
@@ -296,4 +318,9 @@ a{
 
 .ad-gallery .ad-forward{
 	background: url(/images/ad_scroll_forward.png) no-repeat scroll 0 22px transparent;
+}
+
+
+.login_form{
+	width: 500px;
 }

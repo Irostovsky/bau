@@ -54,5 +54,9 @@ module ApplicationHelper
       yield
     end
   end
+
+  def date_format(date)
+   date.strftime("%d.%m.%Y") if date
+  end
   
 end

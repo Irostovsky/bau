@@ -1,2 +1,17 @@
-<%= render :partial => 'content' %>
 
+<% content_for :gallery_content do %>
+	<% content_tag :div, :class => 'photos' do %>
+		<% @photos.each do |photo| %>
+			<% content_tag :div, :class => 'item' do %>
+				<%= image_tag photo.avatar.url(:middle)%>
+				<%= content_tag :div, date_format(photo.created_at), :class => 'date' %>
+				<% content_tag :div do %>
+					<%= content_tag :span, photo.gallery.name, :class => 'name' %>
+					<%= link_to 'Смотреть&nbsp;больше', photo.gallery %>
+				<% end -%>
+			<% end -%>
+		<% end -%>
+	<% end -%>
+<% end -%>
+
+<%= render :partial => 'content' %>
