@@ -24,10 +24,16 @@ img {
 
 .content{
 	margin: 20px 0 0 50px;
+	width: 1160px;
+/*	border: 1px solid red;*/
 }
 
 .left_hi{
 	margin-top: 20px;
+}
+
+a{
+	color: #29039B;
 }
 /******************************************************* TOP MENU ************************************************/
 
@@ -41,9 +47,6 @@ img {
 	font-size: 23px;
 }
 
-.top_menu a{
-	color: #29039B;
-}
 
 .top_menu .logo_link{
 	margin: 0 0 0 30px;
@@ -192,6 +195,7 @@ img {
 	text-indent: 20px;
 } 
 
+
 /*************************************KIT******************************************************************/
 
 .kit_content .top_info{
@@ -210,9 +214,18 @@ img {
 	display: block;
 }
 
+.kit_content .content{
+	margin-left: 20px;
+}
 
+.kit_content .left_menu{
+	width: 300px;
+/*	border: 1px solid red;*/
+}
 
-
+.kit_content .left_menu .item{
+	margin: 3px 0;
+}
 
 .login_form{
 	width: 500px;
