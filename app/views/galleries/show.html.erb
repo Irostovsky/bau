@@ -1,20 +1,21 @@
+<%= content_for :body_class, " show_gallery " %>
+
 
 <% content_for :gallery_content do %>
+
+	<%= content_tag :div, date_format(@gallery.created_at) %>
+	<%= content_tag :div, h(@gallery.name), :class => 'gallery_name legend' %>
 
 	<% for_admin do %>
 		<%= link_to 'Add Photo', new_gallery_photo_path(@gallery) if @gallery %>
 	<% end -%>
 
-
-	<% content_tag :div do %>
-		<% single_line_container do %>
-			<% @photos.each do |photo| %>
-				<% content_tag :div do %>
-					<%= link_to image_tag(photo.avatar.url(:medium)), "#", :class => 'gallery_photo' %>
-					<%= link_to 'Увеличить', '#', :class => 'jqModal start_gallery', :photo_id => photo.id %>
-					<% for_admin do %>
-						<%= link_to image_tag('delete.png'), gallery_photo_path(photo.gallery, photo), :confirm => 'Удалить фотограйию?', :method => :delete %>
-					<% end -%>
+	<% content_tag :div, :class => 'photos' do %>
+		<% @photos.each do |photo| %>
+			<% content_tag :div, :class => 'item' do %>
+				<%= link_to image_tag(photo.avatar.url(:medium)), "#", :class => 'jqModal start_gallery', :photo_id => photo.id %>
+				<% for_admin do %>
+					<%= content_tag :div, link_to(image_tag('delete.png'), gallery_photo_path(photo.gallery, photo), :confirm => 'Удалить фотограйию?', :method => :delete) %>
 				<% end -%>
 			<% end -%>
 		<% end -%>

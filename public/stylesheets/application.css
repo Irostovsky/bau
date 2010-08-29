@@ -309,7 +309,19 @@ a{
 
 .gallery_content .photos .item .name{
 	font-weight: bold;
-	font-size: 16px;
+	font-size: 18px;
+}
+
+/**************************************SHOW GALLERY**************/
+
+.show_gallery .photos .item{
+	width: 22%;
+	margin-bottom: 16px;
+	margin-right: 20px;
+}
+
+.show_gallery .gallery_name{
+	font-size: 18px;
 }
 
 .ad-gallery .ad-back{
