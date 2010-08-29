@@ -324,6 +324,13 @@ a{
 	font-size: 18px;
 }
 
+.show_gallery .close_dialog{
+	color: #FFF;
+	position: absolute;
+	top: -15px;
+	right: 0;
+}
+
 .ad-gallery .ad-back{
 	background: url(/images/arr_left.png) no-repeat scroll 0 39px transparent;
 	left: -52px;

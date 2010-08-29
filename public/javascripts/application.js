@@ -13,7 +13,7 @@ $(document).ready(function(){
 	$('#show_photo_dialog').jqm({
 		onShow: myOpen,
 		overlay: 100
-	});
+	}).jqmAddClose('.close_dialog');
 
   //slideshow
   var galleries = $('.ad-gallery').adGallery({
@@ -85,5 +85,6 @@ $(document).ready(function(){
 		$("#photo_"+$(this).attr('photo_id')).click();
 		return true;
 	});
+		
 	
 });
