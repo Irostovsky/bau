@@ -712,6 +712,7 @@
         thumb.find('img').fadeTo(300, 1);
       };
       var left = thumb[0].parentNode.offsetLeft;
+			left -= 250; //huck to move ad-current to center
       left -= (this.nav_display_width / 2) - (thumb[0].offsetWidth / 2);
       this.thumbs_wrapper.animate({scrollLeft: left +'px'});
     },

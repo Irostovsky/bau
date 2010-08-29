@@ -1,12 +1,18 @@
 $(document).ready(function(){
 
 	var myOpen=function(hash){
-		$('.ad-thumb-list').css('width', '9000px'); 
+		var width = 0;
+		$('.ad-thumb-list li a img').each(function(){
+			width += $(this).attr('width') + 20;
+		});
+		$('.ad-thumb-list').css('width', width + "px");
+		scroll(0, 0); 
 		hash.w.css('width', '700px').show(); 
 	}; 
 	
 	$('#show_photo_dialog').jqm({
-		onShow: myOpen
+		onShow: myOpen,
+		overlay: 100
 	});
 
   //slideshow
@@ -22,7 +28,7 @@ $(document).ready(function(){
     animation_speed: 400, // Which ever effect is used to switch images, how long should it take?
     display_next_and_prev: true, // Can you navigate by clicking on the left/right on the image?
     display_back_and_forward: true, // Are you allowed to scroll the thumb list?
-    scroll_jump: 0, // If 0, it jumps the width of the container
+    scroll_jump: 600, // If 0, it jumps the width of the container
     slideshow: {
       enable: false,
       autostart: false,

@@ -325,13 +325,22 @@ a{
 }
 
 .ad-gallery .ad-back{
-	background: url(/images/ad_scroll_back.png) no-repeat scroll 0 22px transparent;
+	background: url(/images/arr_left.png) no-repeat scroll 0 39px transparent;
+	left: -52px;
+	width: 54px;
 }
 
 .ad-gallery .ad-forward{
-	background: url(/images/ad_scroll_forward.png) no-repeat scroll 0 22px transparent;
+	background: url(/images/arr_right.png) no-repeat scroll 0 39px transparent;
+	right: -52px;
+	width: 43px;
 }
 
+.jqmWindow {
+	top: 50px;
+	background-color: #000;
+	position: absolute;
+}
 
 .login_form{
 	width: 500px;
