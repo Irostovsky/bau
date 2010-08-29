@@ -22,19 +22,20 @@
 		<% end %>
 	<% end -%>
 
-	<% content_tag :div, :class => 'gallery_content' do %>
+	<% content_tag :div do %>
 		<% for_admin do %>
 			<%= link_to 'Add Product', new_kit_product_path(@kit) if @kit %>
 		<% end -%>
 		
-		<% content_tag :div do %>
-			<% single_line_container do %>
-				<% @products.each do |product| %>
-					<% content_tag :div do %>
-						<%= image_tag product.avatar.url(:medium), :class => 'gallery_photo' %>
-						<%= content_tag :div, product.name %>
-						<%= content_tag :div, product.description %>
-						<%= content_tag :div, product.price %>
+		<% content_tag :div, :class => 'products' do %>
+
+			<% @products.each do |product| %>
+				<% content_tag :div, :class => 'item' do %>
+					<%= image_tag product.avatar.url(:big), :class => 'gallery_photo' %>
+					<%= content_tag :div, product.name, :class => 'name' %>
+					<%= content_tag :div, product.description, :class => 'description' %>
+					<% content_tag :div, :class => 'price_wrapper' do %>
+						<%= content_tag :span, number_to_currency(product.price, :precision => 0, :unit => 'грн', :format => "%n %u"), :class => 'price' %>
 						<% for_admin do %>
 							<%= link_to image_tag('pencil.png'), edit_kit_product_path(product.kit, product)%>
 							<%= link_to image_tag('delete.png'), kit_product_path(product.kit, product), :confirm => 'Удалить продукт?', :method => :delete %>
@@ -42,6 +43,7 @@
 					<% end -%>
 				<% end -%>
 			<% end -%>
+
 		<% end -%>
 		<%= will_paginate @products %>
 		

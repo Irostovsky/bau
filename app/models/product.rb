@@ -3,7 +3,7 @@ class Product < ActiveRecord::Base
   belongs_to :kit
   
   has_attached_file :avatar, 
-  :styles => { :thumb => "80x80>", :medium => '200x200>', :big => '600x600>' },
+  :styles => { :thumb => "80x80>", :medium => '200x200>', :big => '250x250>' },
                   :url  => "/assets/products/:id/:style/:basename.:extension",
                   :path => ":rails_root/public/assets/products/:id/:style/:basename.:extension"
 

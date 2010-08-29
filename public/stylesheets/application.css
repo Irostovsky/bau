@@ -227,6 +227,40 @@ a{
 	margin: 3px 0;
 }
 
+.kit_content .products{
+	width: 860px;
+	font-family: Tahoma;
+	font-size: 14px;
+}
+
+.kit_content .products .item{
+	width: 29%;
+	margin-bottom: 50px;
+	margin-right: 3%;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+	vertical-align: top;
+}
+
+.kit_content .products .item .name{
+	font-weight: bold;
+}
+
+.kit_content .products .item .description{
+	font-size: 13x;
+}
+
+.kit_content .products .item .price_wrapper{
+	margin-top: 20px;
+}
+
+.kit_content .products .item .price{
+	padding: 5px;
+	background-color: #F9F919;
+	font-size: 16px;
+}
+
 .login_form{
 	width: 500px;
 }
