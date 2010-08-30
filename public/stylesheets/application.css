@@ -165,14 +165,12 @@ a{
 .basement .bottom_menu a{
 	padding-right: 30px;
 	font-family: Century Gothic;
-	text-decoration: none;
-	color: #000;
 }
 
 .basement .contacts{
 	margin: 0 auto;
 	width: 600px;
-	padding-left: 314px;
+	padding-left: 136px;
 	font-family: Century Gothic;
 	font-size: 14px;
 }
