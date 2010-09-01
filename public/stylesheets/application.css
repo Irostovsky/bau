@@ -52,6 +52,16 @@ a{
 	color: #FFF;
 	font-width: bold;
 }
+
+.legend{
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.hidden{
+	display: none;
+}
+
 /******************************************************* TOP MENU ************************************************/
 
 .top_menu{
@@ -277,10 +287,6 @@ a{
 
 /***********************************GALLERY************************/
 
-.gallery_content .legend{
-	font-weight: bold;
-	margin-bottom: 10px;
-}
 
 .gallery_content .photos{
 	width: 860px;
@@ -353,6 +359,37 @@ a{
 
 .login_form{
 	width: 500px;
+}
+
+/***************************************EDUCATION************/
+.education .men_with_guns_img{
+	width: 460px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.education .title{
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.education ul {
+	margin-top: 50px;
+}
+
+.education ul li {
+	list-style: none;
+	margin-bottom: 5px;
+}
+
+.education .list .item{
+	text-decoration: none;
+	border-bottom: 1px dashed;
+}
+
+.education .list .text{
+	margin-left: 20px;
 }
 
 

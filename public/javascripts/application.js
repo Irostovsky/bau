@@ -86,5 +86,10 @@ $(document).ready(function(){
 		return true;
 	});
 		
+	$(".education .list .item").click(function(){
+		var div = $(this).parent().children("div")[0];
+		$(div).toggleClass("hidden");
+		return false;
+	});
 	
 });
