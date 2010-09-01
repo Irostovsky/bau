@@ -131,7 +131,7 @@ a{
 }
 
 .phones {
-	margin: 150px 10px 0 30px;
+	margin: 150px 10px 0 50px;
 	font-family: Century Gothic;
 	font-size: 20px;
 }
@@ -139,6 +139,7 @@ a{
 .phones span {
 	font-size: 22px;
 	font-weight: bold;
+	display: block;
 }
 
 /*****************************************BASEMENT************************************************/
@@ -233,10 +234,6 @@ a{
 	position: absolute;
 	right: 0;
 	top: 0;
-}
-
-.kit_content .phones span{
-	display: block;
 }
 
 .kit_content .content{
