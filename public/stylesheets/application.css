@@ -107,6 +107,7 @@ a{
 /******************************************************TOP INFO*****************************************************/
 
 .top_info{
+	position: relative;
 	width: 707px;
 }
 
@@ -143,11 +144,11 @@ a{
 .phones {
 	margin: 150px 10px 0 30px;
 	font-family: Century Gothic;
-	font-size: 20px;
+	font-size: 16px;
 }
 
 .phones span {
-	font-size: 22px;
+	font-size: 16px;
 	font-weight: bold;
 	display: block;
 }
@@ -198,6 +199,13 @@ a{
 }
 
 /******************************************************* HOME ************************************************/
+.home .phones {
+	font-size: 20px;
+}
+
+.home .phones span {
+	font-size: 22px;
+}
 
 .home .top_info{
 	position: relative;
@@ -234,9 +242,6 @@ a{
 
 /*************************************KIT******************************************************************/
 
-.kit_content .top_info{
-	position: relative;
-}
 
 .kit_content .top_info .gun_men{
 	width: 289px;
@@ -354,8 +359,16 @@ a{
 
 .service ul li {
 	margin-left: 20px;
-	list-style: none;
+	list-style-image: url(/images/dash.png);
 }
+
+.service .men_and_door_img{
+	width: 380px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
 
 .login_form{
 	width: 500px;
