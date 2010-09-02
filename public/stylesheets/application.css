@@ -111,6 +111,12 @@ a{
 	width: 707px;
 }
 
+.top_info img{
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
 .top_info .default_img{
 	margin-top: 10px;
 }
@@ -211,12 +217,8 @@ a{
 	position: relative;
 }
 
-.home .men_with_case_img{
+.home .top_info img{
 	width: 143px;
-	height: 665px;
-	position: absolute;
-	right: 0;
-	top: 0;
 }
 
 .home .content{
@@ -243,12 +245,8 @@ a{
 /*************************************KIT******************************************************************/
 
 
-.kit_content .top_info .gun_men{
+.kit_content .top_info img{
 	width: 289px;
-	height: 371px;
-	position: absolute;
-	right: 0;
-	top: 0;
 }
 
 .kit_content .content{
@@ -362,11 +360,8 @@ a{
 	list-style-image: url(/images/dash.png);
 }
 
-.service .men_and_door_img{
+.service .top_info img{
 	width: 380px;
-	position: absolute;
-	right: 0;
-	top: 0;
 }
 
 
@@ -375,11 +370,8 @@ a{
 }
 
 /***************************************EDUCATION************/
-.education .men_with_guns_img{
+.education .top_info img{
 	width: 460px;
-	position: absolute;
-	right: 0;
-	top: 0;
 }
 
 .education .title{
@@ -406,3 +398,28 @@ a{
 }
 
 
+/**********************************CONTACT***********************************/
+
+.contact .top_info img{
+	width: 217px;
+}
+
+.contact .row{
+	font-size: 20px;
+}
+
+.contact .row .label{
+	width: 400px;
+	text-align: right;
+	margin-right: 10px;
+}
+
+.contact .row .value{
+	width: 400px;
+	text-align: left;
+}
+
+.contact .content {
+	margin-bottom: 30px;
+	
+}

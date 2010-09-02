@@ -1,0 +1,26 @@
+<%= content_for :body_class, ' contact ' %>
+
+<% content_for :top_info do %>
+	<%= render :partial => '/layouts/phones' %>
+	<%= image_tag "contact_man.png" %>
+<% end -%>
+
+<%= content_for :left_hi, 'can_i_go.png' %>
+
+<% data = 
+	[
+		{'Адрес:'               => '85300, г. Донецк, ул. Стадионная, 15 а'},
+		{'Электронная почта:'   => 'e-mail: BAUkraine.gmail.com'},
+		{'Телефон:'             => '(062) 400-00-00'},
+		{'Телефон/Факс:'        => '(062) 410-20-00'}
+	]
+%>
+
+<% data.each do |item| %>
+	<div class='row'>
+		<% single_line_container do %>
+			<%= content_tag :div, item.keys[0], :class => 'label' %>
+			<%= content_tag :div, item.values[0], :class => 'value' %>
+		<% end -%>
+	</div>
+<% end -%>
