@@ -185,7 +185,7 @@ a{
 	font-family: Century Gothic;
 }
 
-.basement .contacts{
+.contacts{
 	margin: 0 auto;
 	width: 600px;
 	padding-left: 136px;
@@ -193,12 +193,12 @@ a{
 	font-size: 14px;
 }
 
-.basement .contacts .address{
+.contacts .address{
 	text-align: right;
 	padding-right: 10px;
 }
 
-.basement .contacts .phone_email{
+.contacts .phone_email{
 	text-align: left;
 	padding-left: 10px;
 	border-left: 1px solid black;
@@ -422,4 +422,55 @@ a{
 .contact .content {
 	margin-bottom: 30px;
 	
+}
+
+/***************************************start***********************************************/
+
+.start {
+  background: url(/images/start_bg_slice.png);
+}
+
+.start .big_logo {
+  width: 1024px;
+  height: 708px;
+  background: url(/images/start_bg.png);
+  margin: 0 auto;
+	position: relative;
+}
+
+.start .big_logo h1{
+  color: #FDED00;
+  text-align: center;
+  padding-top: 1em;
+}
+
+.start .big_logo h2{
+  color: #fff;
+  text-align: center;
+}
+
+.start .big_logo .home_link{
+	position: relative;
+	width: 1024px;
+	height: 430px;
+	display:block;
+	top: 0px;
+	outline: none;
+}
+
+.start .contacts{
+  position: relative;
+  color: #676767;
+  padding-left: 0;
+  top: 94px;
+  left: 39px;
+}
+
+.start .contacts .phone_email{
+  border-left: 1px solid #E5E500;
+  padding-left: 20px;
+}
+
+.start .contacts .address{
+  padding-right: 20px;
 }

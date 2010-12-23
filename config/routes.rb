@@ -9,6 +9,7 @@ ActionController::Routing::Routes.draw do |map|
   end
   
   map.resources :home, :only => :index
+  map.resources :start, :only => :index
   map.resources :contacts, :only => :index
   map.resources :description, :only => :index
   map.resources :education, :only => :index
@@ -20,7 +21,7 @@ ActionController::Routing::Routes.draw do |map|
   
   map.devise_for :users
   
-  map.root :controller => "home"
+  map.root :controller => "start"
   
   map.with_options :controller => "admin/home", :action => "index" do |f|
     f.admin "admin"
