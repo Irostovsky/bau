@@ -14,9 +14,14 @@ body {
 	width: 1240px;
 	margin: 0 auto;
 	padding-bottom: 30px;
-/*	border: 1px solid red;*/
+  background: url(/images/start_bg_slice.png);
 }
 
+.main{
+  width: 1024px;
+  background: url(/images/texture_bg.png);
+  margin: 0 auto;
+}
 
 img {
   border: none;
@@ -186,22 +191,24 @@ a{
 }
 
 .contacts{
-	margin: 0 auto;
-	width: 600px;
-	padding-left: 136px;
 	font-family: Century Gothic;
-	font-size: 14px;
+	font-size: 13px;
+	color: #676767;
+  -moz-box-sizing: border-box;  
+  margin-top: 0.1em;
 }
 
 .contacts .address{
+ -moz-box-sizing: border-box;
 	text-align: right;
-	padding-right: 10px;
+	width: 46%;
 }
 
 .contacts .phone_email{
-	text-align: left;
-	padding-left: 10px;
-	border-left: 1px solid black;
+ -moz-box-sizing: border-box;
+ 	text-align: left;
+ 	float: right;
+	width: 46%;
 }
 
 /******************************************************* HOME ************************************************/
@@ -426,16 +433,15 @@ a{
 
 /***************************************start***********************************************/
 
-.start {
-  background: url(/images/start_bg_slice.png);
+.start{
+  font-family: Century Cothic;
 }
 
 .start .big_logo {
   width: 1024px;
   height: 708px;
-  background: url(/images/start_bg.png);
+  background: url(/images/big_logo.png);
   margin: 0 auto;
-	position: relative;
 }
 
 .start .big_logo h1{
@@ -452,30 +458,7 @@ a{
 .start .big_logo .home_link{
 	position: relative;
 	width: 1024px;
-	height: 430px;
+	height: 518px;
 	display:block;
 	top: 0px;
-	outline: none;
-}
-
-
-.start .contacts{
-  position: relative;
-  color: #676767;
-  padding-left: 0;
-  top: 94px;
-  left: 39px;
-}
-
-body:nth-of-type(1) .contacts{
-  left: 38px;
-}
-
-.start .contacts .phone_email{
-  border-left: 1px solid #E5E500;
-  padding-left: 20px;
-}
-
-.start .contacts .address{
-  padding-right: 20px;
 }

@@ -14,7 +14,9 @@
 
   </head>
   <body class="<%= yield :body_class %>">
-		<%= yield %>
+    <div class='main'>
+  		<%= yield %>
+		<div>    
 
     <%= render "layouts/include_all_jquery" %>
     <%= javascript_include_tag "application.js"%>
