@@ -1,6 +1,8 @@
 <%= content_for :body_class, " gallery_content " %>
 
-<%= content_for :left_hi, 'attention.png' %>
+<% content_for :top_info do %>
+  <%= image_tag 'photo_for_gallery.png' %>
+<% end -%>
 
 <% single_line_container do %>
 

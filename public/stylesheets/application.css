@@ -10,15 +10,14 @@ body {
   font-family: Century Cothic;
   font-size: 16px;
 	color: #fff;
-	width: 1240px;
 	margin: 0 auto;
 	padding-bottom: 30px;
   background: url(/images/start_bg_slice.png);
 }
 
 .main{
-  width: 1024px;
-  background: url(/images/texture_bg.png);
+  width: 1209px;
+  background: url(/images/texture_bg_2.png);
   margin: 0 auto;
   position: relative;
   padding-bottom: 1em;
@@ -52,6 +51,7 @@ a{
 .legend{
 	font-weight: bold;
 	margin-bottom: 10px;
+	color: #ffff00;
 }
 
 .hidden{
@@ -69,7 +69,7 @@ a{
   height: 30px;
   background: url(/images/menu_bg.png) no-repeat;
   padding-top: 5px;
-  padding-left: 21px;
+  text-align: center;
   margin-left: -14px;
   -moz-box-sizing: border-box;  
 }
@@ -101,13 +101,13 @@ a{
   right: 0;
   text-align: center;
   top: 1em;
-  width: 174px;
+  width: 202px;
 }
 
 /******************************************************TOP INFO*******************************/
 
 .top_info img{
-	width: 1024px;
+	width: 1209px;
 }
 
 
@@ -191,12 +191,6 @@ a{
 
 /******************************************************* HOME ************************************************/
 
-.home .content{
-  padding: 20px;
-	width: 900px;
-	height: 219px;
-}
-
 .home .content div,
 .home .content p{
 	text-indent: 20px;
@@ -206,14 +200,9 @@ a{
 /*************************************KIT******************************************************************/
 
 
-.kit_content .top_info img{
-	width: 289px;
+.left_menu{
+  margin-right: 2em;
 }
-
-.kit_content .content{
-	margin-left: 20px;
-}
-
 
 .kit_content .products{
 	width: 860px;
@@ -247,6 +236,7 @@ a{
 	padding: 5px;
 	background-color: #F9ED01;
 	font-size: 16px;
+	color: #000;
 }
 
 /***********************************GALLERY************************/
@@ -349,16 +339,12 @@ a{
 
 /**********************************CONTACT***********************************/
 
-.contact .top_info img{
-	width: 217px;
-}
-
 .contact .row{
 	font-size: 20px;
 }
 
 .contact .row .label{
-	width: 400px;
+	width: 500px;
 	text-align: right;
 	margin-right: 10px;
 }
@@ -374,6 +360,10 @@ a{
 }
 
 /***************************************start***********************************************/
+
+.start .main{
+  width: 1024px;
+}
 
 .start .big_logo {
   width: 1024px;
@@ -394,7 +384,7 @@ a{
 }
 
 .slogan{
-  margin-left: 3em;
+  margin-left: 8em;
   margin-top: 1em;
 }
 
