@@ -318,19 +318,10 @@ a{
 
 .service ul li {
 	margin-left: 20px;
-	list-style-image: url(/images/dash.png);
-}
-
-.service .top_info img{
-	width: 380px;
-}
-
-
-.login_form{
-	width: 500px;
 }
 
 /***************************************EDUCATION************/
+
 
 .education .title{
 	font-size: 14px;
@@ -413,4 +404,8 @@ a{
 	height: 518px;
 	display:block;
 	top: 0px;
+}
+
+.login_form{
+	width: 500px;
 }
