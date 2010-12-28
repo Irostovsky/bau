@@ -18,3 +18,7 @@ form.formtastic fieldset > ol > li.password input {
 form.formtastic fieldset > ol > li.string input {
 	max-width: 13em;
 }
+
+form.formtastic legend {
+  color: #BEBEBE;
+}

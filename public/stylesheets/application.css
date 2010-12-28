@@ -51,7 +51,6 @@ a{
 .legend{
 	font-weight: bold;
 	margin-bottom: 10px;
-	color: #ffff00;
 }
 
 .hidden{
@@ -133,10 +132,6 @@ a{
   float: right;
 }
 
-.admin_top_menu{
-	background-color: yellow;
-}
-
 /******************************CONTNENT************************************/
 
 .content_wrapper {
@@ -201,7 +196,7 @@ a{
 
 
 .left_menu{
-  margin-right: 2em;
+  margin-right: 1.1em;
 }
 
 .kit_content .products{
@@ -242,6 +237,7 @@ a{
 /***********************************GALLERY************************/
 
 
+
 .gallery_content .photos{
 	width: 860px;
 	font-family: Tahoma;
@@ -267,6 +263,9 @@ a{
 	font-size: 18px;
 }
 
+.gallery_content .legend{
+  color: #ffff00;
+}
 /**************************************SHOW GALLERY**************/
 
 .show_gallery .photos .item{

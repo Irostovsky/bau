@@ -20,7 +20,7 @@ module ApplicationHelper
       {:name => :service, :path => service_index_path, :title => 'Услуги'},
       {:name => :kits, :path => kits_path, :title => 'Снаряжение'},
       {:name => :galleries, :path => galleries_path, :title => 'Галерея'},
-      {:name => :news, :path => '', :title => 'Новости'},
+      {:name => :news, :path => home_index_path, :title => 'Новости'},
       {:name => :contacts, :path => contacts_path, :title => 'Контакты'}
     ]
   end
