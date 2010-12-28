@@ -7,11 +7,20 @@ $(document).ready(function(){
 		});
 		$('.ad-thumb-list').css('width', width + "px");
 		scroll(0, 0); 
-		hash.w.css('width', '700px').show(); 
+		hash.w.css('width', '700px').show();
+		$('.content_wrapper').css('position', 'static'); 
+	}; 
+	
+	var myClose=function(hash) {
+     hash.w.fadeOut('2000',function(){ 
+       hash.o.remove(); 
+       $('.content_wrapper').css('position', 'relative');
+       }); 
 	}; 
 	
 	$('#show_photo_dialog').jqm({
 		onShow: myOpen,
+		onHide: myClose,
 		overlay: 100
 	}).jqmAddClose('.close_dialog');
 

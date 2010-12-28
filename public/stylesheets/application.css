@@ -9,9 +9,9 @@ body, table, tr, td, th, thead, tbody, h1, h3, form, ul, li {
 body {
   font-family: Century Cothic;
   font-size: 16px;
-	color: #fff;
-	margin: 0 auto;
-	padding-bottom: 30px;
+  color: #fff;
+  margin: 0 auto;
+  padding-bottom: 30px;
   background: url(/images/start_bg_slice.png);
 }
 
@@ -28,33 +28,33 @@ img {
 }
 
 a{
-	color: #fff;
+  color: #fff;
 }
 
 .pagination{
-	text-align: center;
-	font-family: Tahoma;
+  text-align: center;
+  font-family: Tahoma;
 }
 
 .pagination > *{
-	margin-left: 10px;
+  margin-left: 10px;
 }
 
 .pagination .current{
-	padding: 3px;
-	background-color:#F9ED01;
-	font-size: 20px;
-	color: #FFF;
-	font-width: bold;
+  padding: 3px;
+  background-color:#F9ED01;
+  font-size: 20px;
+  color: #FFF;
+  font-width: bold;
 }
 
 .legend{
-	font-weight: bold;
-	margin-bottom: 10px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .hidden{
-	display: none;
+  display: none;
 }
 
 /******************************************************* TOP MENU ************************************************/
@@ -106,18 +106,18 @@ a{
 /******************************************************TOP INFO*******************************/
 
 .top_info img{
-	width: 1209px;
+  width: 1209px;
 }
 
 
 .success_note{
   color: green;
-	display: block;
+  display: block;
 }
 
 .error_note{
   color: red;
-	display: block;
+  display: block;
 }
 
 .reset_float {
@@ -139,7 +139,7 @@ a{
   -moz-border-radius: 10px;
   margin-top: -10px;
   position: relative;
-  z-index: 1000;
+  z-index: 2;
   color: #BEBEBE;
 }
 
@@ -147,7 +147,8 @@ a{
   padding: 2em 3em;
   
 }
-/*****************************************BASEMENT************************************************/
+
+/******************************************BASEMENT************************************************/
 .basement{
   margin-top: 3em;
 }
