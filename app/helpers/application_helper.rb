@@ -15,12 +15,12 @@ module ApplicationHelper
   def top_menu_data
     [
       {:name => :description, :path => description_index_path, :title => 'NPBL Ukraine'},
-      {:name => :home, :path => home_index_path, :title => 'Главная'},
+      {:name => :home, :path => home_index_path, :title => 'Академия'},
       {:name => :education, :path => education_index_path, :title => 'Обучение'},
       {:name => :service, :path => service_index_path, :title => 'Услуги'},
       {:name => :kits, :path => kits_path, :title => 'Снаряжение'},
       {:name => :galleries, :path => galleries_path, :title => 'Галерея'},
-      {:name => :contacts, :path => contacts_path, :title => 'Связаться'}
+      {:name => :contacts, :path => contacts_path, :title => 'Контакты'}
     ]
   end
   

@@ -14,32 +14,36 @@
 
   </head>
   <body class="<%= yield :body_class %>">
-		<%= admin_top_menu %>
-		<% single_line_container do %>
-			<% content_tag :div, :class => 'top_menu' do %>
+    <div class=main>
+				<%= content_tag :div, 'NBPL', :class => 'plashka' %>
+    		<%= admin_top_menu %>
 				<% single_line_container do %>
 					<%= link_to image_tag("logo.png"), root_path, :class => 'logo_link' %>
-					<%= content_tag :div, top_menu, :class => 'top_menu_links' %>
-				<% end %>		
-			<% end %>
-			<% content_tag :div, :class => "top_info" do %>
-				<%=  yield(:top_info) || image_tag('boys_and_car.png', :class => 'default_img') %>
-			<% end -%>
-		<% end -%>		
+					<div class='slogan'>
+					  <%= render :partial => '/layouts/slogan' %>
+					</div>
+				<% end %>
+						
+				<%=  content_tag :div, top_menu, :class => "top_menu" %>
+-----------------------------------------------------------------
+  			<% content_tag :div, :class => "top_info" do %>
+  				<%=  yield(:top_info) || image_tag('boys_and_car.png', :class => 'default_img') %>
+  			<% end -%>
 		
-		<% single_line_container do %>
+  		<% single_line_container do %>
 			
-			<% left_hi_image =  yield(:left_hi) || 'wish_health.png' %>
-			<%= image_tag left_hi_image, :class => 'left_hi' %>
+  			<% left_hi_image =  yield(:left_hi) || 'wish_health.png' %>
+  			<%= image_tag left_hi_image, :class => 'left_hi' %>
 		
-			<% content_tag :div, :class => 'content' do %>
-				<%= content_tag :span, flash[:notice], :class => 'success_note' %>
-				<%= content_tag :span, flash[:alert], :class => 'error_note' %>
-		    <%= yield %>
-			<% end -%>
-		<% end -%>
+  			<% content_tag :div, :class => 'content' do %>
+  				<%= content_tag :span, flash[:notice], :class => 'success_note' %>
+  				<%= content_tag :span, flash[:alert], :class => 'error_note' %>
+  		    <%= yield %>
+  			<% end -%>
+  		<% end -%>
 
-    <%= render :partial => '/layouts/basement' %>
+      <%= render :partial => '/layouts/basement' %>
+    </div>
 
     <%= render "layouts/include_all_jquery" %>
     <%= javascript_include_tag "application.js"%>

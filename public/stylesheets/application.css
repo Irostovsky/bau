@@ -7,10 +7,9 @@ body, table, tr, td, th, thead, tbody, h1, h3, form, ul, li {
 }
 
 body {
-  font-family: Times New Roman;
+  font-family: Century Cothic;
   font-size: 16px;
-	color: #000;
-  padding: 0 10px;
+	color: #fff;
 	width: 1240px;
 	margin: 0 auto;
 	padding-bottom: 30px;
@@ -21,6 +20,7 @@ body {
   width: 1024px;
   background: url(/images/texture_bg.png);
   margin: 0 auto;
+  position: relative;
 }
 
 img {
@@ -38,7 +38,7 @@ img {
 }
 
 a{
-	color: #29039B;
+	color: #fff;
 }
 
 .pagination{
@@ -70,46 +70,50 @@ a{
 /******************************************************* TOP MENU ************************************************/
 
 .top_menu{
-	margin: 50px 0 20px 0;
-	background-image: url(/images/back_logo.png);
-	width: 533px;
-	height: 293px;
-	font-family: Century Gothic;
-	color: #111d9c;
-	font-size: 23px;
 }
 
-
-.top_menu .logo_link{
-	margin: 0 0 0 30px;
+.top_menu > *{
+  display: inline-block;
+  width: 140px;
+  height: 30px;
+  background: url(/images/menu_bg.png) no-repeat;
+  padding-top: 5px;
+  padding-left: 21px;
+  margin-left: -14px;
+  -moz-box-sizing: border-box;  
 }
 
-.top_menu .top_menu_links{
-	margin-top: 35px;
-	margin-left: 118px;
+.top_menu > *:first-child{
+  margin-left: 0px;
 }
 
-.top_menu .top_menu_links a{
-	margin-bottom: 3px;
+.top_menu a {
+  text-decoration: none;
 }
 
-.top_menu a{
-	display: block;
+.top_menu a:hover {
+  background: url(/images/active_menu_bg.png)  no-repeat;
+  color: #010000;
 }
 
 .top_menu .current_page{
-	background-color: #F9ED01;
-	color: #FFF;
-	font-weight: bold;
-	font-size: 32px;
-	padding: 0 6px 6px;
-	width: 201px;
-	display: block;
-	margin-left: -7px;
+  background: url(/images/active_menu_bg.png)  no-repeat;
+  color: #010000;
 }
 
+.plashka{
+  background: url("/images/plashka.png") no-repeat scroll 0 0 transparent;
+  font-size: 2em;
+  height: 313px;
+  padding-top: 112px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 1em;
+  width: 174px;
+}
 
-/******************************************************TOP INFO*****************************************************/
+/******************************************************TOP INFO*******************************/
 
 .top_info{
 	position: relative;
@@ -433,10 +437,6 @@ a{
 
 /***************************************start***********************************************/
 
-.start{
-  font-family: Century Cothic;
-}
-
 .start .big_logo {
   width: 1024px;
   height: 708px;
@@ -444,15 +444,20 @@ a{
   margin: 0 auto;
 }
 
-.start .big_logo h1{
+.start .big_logo h1, .slogan h1{
   color: #FDED00;
   text-align: center;
   padding-top: 1em;
 }
 
-.start .big_logo h2{
+.start .big_logo h2, .slogan h2{
   color: #fff;
   text-align: center;
+}
+
+.slogan{
+  margin-left: 3em;
+  margin-top: 1em;
 }
 
 .start .big_logo .home_link{
