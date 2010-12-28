@@ -21,20 +21,11 @@ body {
   background: url(/images/texture_bg.png);
   margin: 0 auto;
   position: relative;
+  padding-bottom: 1em;
 }
 
 img {
   border: none;
-}
-
-.content{
-	margin: 20px 0 0 50px;
-	width: 1160px;
-/*	border: 1px solid red;*/
-}
-
-.left_hi{
-	margin-top: 20px;
 }
 
 a{
@@ -115,20 +106,10 @@ a{
 
 /******************************************************TOP INFO*******************************/
 
-.top_info{
-	position: relative;
-	width: 707px;
-}
-
 .top_info img{
-	position: absolute;
-	right: 0;
-	top: 0;
+	width: 1024px;
 }
 
-.top_info .default_img{
-	margin-top: 10px;
-}
 
 .success_note{
   color: green;
@@ -156,43 +137,31 @@ a{
 	background-color: yellow;
 }
 
-.phones {
-	margin: 150px 10px 0 30px;
-	font-family: Century Gothic;
-	font-size: 16px;
-}
+/******************************CONTNENT************************************/
 
-.phones span {
-	font-size: 16px;
-	font-weight: bold;
-	display: block;
+.content_wrapper {
+  background-color: #272727;
+  -moz-border-radius: 10px;
+  margin-top: -10px;
+  position: relative;
+  z-index: 1000;
 }
 
 /*****************************************BASEMENT************************************************/
 .basement{
-  text-align: center;
-  padding-top: 20px;
+  margin-top: 3em;
 }
 
-.basement .line{
-	background-color: #FDED01;
-	height: 43px;
-	font-family: Century Gothic;
-	font-weight: bold;
-	color: #FFF;
-	font-size: 36px;
-	line-height: 40px;
+.basement .contacts .address{
+  width: 50%;
 }
 
-.basement .bottom_menu{
-	margin: 10px 0;
-	font-size: 14px;
+.basement .contacts .phone_email{
+  width: 48%;
+  border-left: 1px solid #ffff00;
+  padding-left: 2em;
 }
 
-.basement .bottom_menu a{
-	padding-right: 30px;
-	font-family: Century Gothic;
-}
 
 .contacts{
 	font-family: Century Gothic;
@@ -216,23 +185,9 @@ a{
 }
 
 /******************************************************* HOME ************************************************/
-.home .phones {
-	font-size: 20px;
-}
-
-.home .phones span {
-	font-size: 22px;
-}
-
-.home .top_info{
-	position: relative;
-}
-
-.home .top_info img{
-	width: 143px;
-}
 
 .home .content{
+  padding: 20px;
 	width: 900px;
 	height: 219px;
 }
@@ -241,16 +196,6 @@ a{
 .home .content p{
 	text-indent: 20px;
 } 
-
-/******************************CONTNENT************************************/
-.left_menu{
-	width: 300px;
-/*	border: 1px solid red;*/
-}
-
-.left_menu .item{
-	margin: 3px 0;
-}
 
 
 /*************************************KIT******************************************************************/
