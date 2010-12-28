@@ -145,8 +145,13 @@ a{
   margin-top: -10px;
   position: relative;
   z-index: 1000;
+  color: #BEBEBE;
 }
 
+.content{
+  padding: 2em 3em;
+  
+}
 /*****************************************BASEMENT************************************************/
 .basement{
   margin-top: 3em;
@@ -326,9 +331,6 @@ a{
 }
 
 /***************************************EDUCATION************/
-.education .top_info img{
-	width: 460px;
-}
 
 .education .title{
 	font-size: 14px;
