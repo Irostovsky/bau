@@ -1,0 +1,13 @@
+<%= content_for :body_class, " events " %>
+
+<%= link_to('Add news', new_event_path) if user_signed_in? %>
+
+<ul class='list'>
+  <% @events.each do |event| %>
+  	<li>
+  		<%= link_to event.created_at, '#', :class => 'item' %>
+  		<%= link_to event.title, '#', :class => 'item' %>
+  		<%= content_tag :div, event.body, :class => "text hidden" %>
+  	</li>
+  <% end -%>
+</ul>

@@ -8,6 +8,8 @@ ActionController::Routing::Routes.draw do |map|
     gallery.resources :photos, :only => [:new, :create, :destroy]
   end
   
+  map.resources :events
+  
   map.resources :home, :only => :index
   map.resources :start, :only => :index
   map.resources :contacts, :only => :index
