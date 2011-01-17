@@ -153,14 +153,14 @@ a{
   margin-top: 3em;
 }
 
-.basement .contacts .address{
-  width: 50%;
+.basement .contacts{
+  width: 430px;
+  margin: 0 auto;
 }
 
 .basement .contacts .phone_email{
-  width: 48%;
   border-left: 1px solid #ffff00;
-  padding-left: 2em;
+  padding-left: 25px;
 }
 
 
@@ -175,14 +175,17 @@ a{
 .contacts .address{
  -moz-box-sizing: border-box;
 	text-align: right;
-	width: 46%;
 }
+
 
 .contacts .phone_email{
  -moz-box-sizing: border-box;
  	text-align: left;
  	float: right;
-	width: 46%;
+}
+
+.start .contacts .address, .start .contacts .phone_email{
+  width: 46%;
 }
 
 /******************************************************* HOME ************************************************/
