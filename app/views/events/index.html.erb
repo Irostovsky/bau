@@ -5,7 +5,7 @@
 <ul class='list'>
   <% @events.each do |event| %>
   	<li>
-  		<%= link_to date_format(event.created_at), '#', :class => 'item' %>
+  		<%= link_to date_format(event.created_at), '#', :class => 'item date' %>
   		<%= link_to event.title, '#', :class => 'item' %>
   		<% for_admin do %>
 		    <%= link_to image_tag('pencil.png'), edit_event_path(event) %>
