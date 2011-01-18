@@ -59,5 +59,9 @@ module ApplicationHelper
   def date_format(date)
    date.strftime("%d.%m.%Y") if date
   end
+
+  def textilize text
+    RedCloth.new(text).to_html
+  end
   
 end
