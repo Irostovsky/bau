@@ -7,14 +7,9 @@ class EventsController < ApplicationController
     @events = Event.all
   end
 
-  def show
-    @event = Event.find(params[:id])
-  end
-
   def new
     @event = Event.new
   end
-
 
   def create
     @event = Event.new(params[:event])
@@ -33,8 +28,8 @@ class EventsController < ApplicationController
   def update
     @event = Event.find(params[:id])
 
-    if @news.update_attributes(params[:news])
-      redirect_to @news, :notice => 'News was successfully updated.'
+    if @event.update_attributes(params[:event])
+      redirect_to events_path, :notice => 'News was successfully updated.'
     else
       render :action => "edit"
     end

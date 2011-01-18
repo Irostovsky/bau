@@ -7,6 +7,11 @@
   	<li>
   		<%= link_to event.created_at, '#', :class => 'item' %>
   		<%= link_to event.title, '#', :class => 'item' %>
+  		<% for_admin do %>
+		    <%= link_to image_tag('pencil.png'), edit_event_path(event) %>
+		    <%= link_to image_tag('delete.png'), event, :confirm => 'Удалить новость?', :method => :delete %> 
+			<% end -%>
+			
   		<%= content_tag :div, event.body, :class => "text hidden" %>
   	</li>
   <% end -%>
