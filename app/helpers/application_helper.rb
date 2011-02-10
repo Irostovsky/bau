@@ -14,7 +14,7 @@ module ApplicationHelper
 
   def top_menu_data
     [
-      {:name => :description, :path => description_index_path, :title => 'NPBL Ukraine'},
+      {:name => :description, :path => 'http://npblukraine.com', :title => 'NPBL Ukraine'},
       {:name => :home, :path => home_index_path, :title => 'Академия'},
       {:name => :education, :path => education_index_path, :title => 'Обучение'},
       {:name => :service, :path => service_index_path, :title => 'Услуги'},
@@ -30,7 +30,8 @@ module ApplicationHelper
       if @page == h[:name]
         content_tag(:span, h[:title], :class => 'current_page') 
       else
-        link_to h[:title], h[:path] 
+        popup = h[:name] == :description
+        link_to h[:title], h[:path], :popup => popup 
       end
     end
   end
