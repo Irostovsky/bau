@@ -195,6 +195,19 @@ a{
 	text-indent: 20px;
 } 
 
+.home .licenzies img{
+  width: 220px;
+  margin: 10px;
+}
+
+.home .licenzies{
+  text-align: center;
+}
+
+.home .licenzies h4{
+  text-align: center;
+}
+
 
 /*************************************KIT******************************************************************/
 
