@@ -104,4 +104,13 @@ $(document).ready(function(){
 	$(".education .list .item").click(toggleList);
 	$(".events .list .item").click(toggleList);
 	
+	if ($(".licenzies").length > 0){
+	  hs.graphicsDir = 'images/graphics/';
+  	hs.wrapperClassName = 'wide-border';
+    
+    $(".licenzies a.highslide").click(function(){
+      return hs.expand(this);
+    });
+	}
+	
 });
