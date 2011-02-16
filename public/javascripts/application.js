@@ -101,7 +101,10 @@ $(document).ready(function(){
 		return false;
 	};
 	
-	$(".education .list .item").click(toggleList);
+  $(".education .list .item").click(function(){
+    return false;
+  });
+  
 	$(".events .list .item").click(toggleList);
 	
 	if ($(".licenzies").length > 0){

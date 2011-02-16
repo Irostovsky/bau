@@ -333,13 +333,8 @@ a{
 /***************************************EDUCATION************/
 
 
-.education .title{
-	font-size: 14px;
-	font-weight: bold;
-}
-
 .education ul {
-	margin-top: 50px;
+	margin-top: 15px;
 }
 
 .education ul li {
@@ -349,7 +344,6 @@ a{
 
 .education .list .item{
 	text-decoration: none;
-	border-bottom: 1px dashed;
 }
 
 .education .list .text{
