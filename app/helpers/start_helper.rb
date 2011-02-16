@@ -1,6 +1,7 @@
 module StartHelper
   
   def licenzies
-    Gallery.find_by_name('Лицензии').photos
+    gallery = Gallery.find_by_name('Лицензии').
+    gallery ? gallery.photos : [] 
   end
 end
