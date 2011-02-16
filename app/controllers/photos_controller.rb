@@ -3,18 +3,15 @@ class PhotosController < ApplicationController
   before_filter :setup_page
   before_filter :authenticate_user!
   before_filter :find_gallery
+  before_filter :find_photo, :only => [:edit, :update, :destroy]
   
   def new
     @photo = Photo.new
   end
 
-  # GET /photos/1/edit
   def edit
-    @photo = Photo.find(params[:id])
   end
 
-  # POST /photos
-  # POST /photos.xml
   def create
     @photo = Photo.new(params[:photo])
 
@@ -25,8 +22,15 @@ class PhotosController < ApplicationController
     end
   end
 
+  def update
+    if @photo.update_attributes params[:photo]
+      redirect_to(gallery_path(@gallery), :notice => 'Photo was successfully updated.')
+    else
+      render :action => :edit
+    end
+  end
+
   def destroy
-    @photo = Photo.find(params[:id])
     @photo.destroy
     redirect_to(gallery_path(@gallery), :notice => 'Photo was successfully deleted.')
   end
@@ -40,5 +44,8 @@ class PhotosController < ApplicationController
   def find_gallery
     @gallery = Gallery.find params[:gallery_id]
   end
-  
+
+  def find_photo
+    @photo = @gallery.photos.find_by_id params[:id] 
+  end
 end

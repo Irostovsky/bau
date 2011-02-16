@@ -5,7 +5,7 @@ ActionController::Routing::Routes.draw do |map|
   end
 
   map.resources :galleries do |gallery|
-    gallery.resources :photos, :only => [:new, :create, :destroy]
+    gallery.resources :photos, :except => :index
   end
   
   map.resources :events

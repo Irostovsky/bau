@@ -20,6 +20,7 @@
   <h4>Наши лицензии:</h4>
   <% licenzies.each do |photo| %>
     <%= link_to image_tag(photo.avatar.url(:medium)), photo.avatar.url(:licen), :class => 'highslide', :title => "Увеличить" %>
+    <div><%= photo.title %></div>
   <% end -%>
 </div>
  
