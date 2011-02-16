@@ -11,7 +11,7 @@ class GalleriesController < ApplicationController
 
   def show
     @gallery = Gallery.find(params[:id])
-    @galleries = Gallery.all
+    @galleries = current_user ? Gallery.all : Gallery.visible
     @photos = @gallery.photos
   end
 
