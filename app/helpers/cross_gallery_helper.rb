@@ -1,0 +1,2 @@
+module CrossGalleryHelper
+end

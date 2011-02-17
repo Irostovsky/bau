@@ -429,3 +429,8 @@ a{
 .login_form{
 	width: 500px;
 }
+/***********************************cross_gallery*/
+
+.cross_gallery .ways{
+  text-align: center;
+}

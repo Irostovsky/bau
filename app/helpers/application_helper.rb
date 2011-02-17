@@ -19,7 +19,7 @@ module ApplicationHelper
       {:name => :education, :path => education_index_path, :title => 'Обучение'},
       {:name => :service, :path => service_index_path, :title => 'Услуги'},
       {:name => :kits, :path => kits_path, :title => 'Снаряжение'},
-      {:name => :galleries, :path => galleries_path, :title => 'Галерея'},
+      {:name => :galleries, :path => cross_gallery_index_path, :title => 'Галерея'},
       {:name => :events, :path => events_path, :title => 'Новости'},
       {:name => :contacts, :path => contacts_path, :title => 'Контакты'}
     ]
