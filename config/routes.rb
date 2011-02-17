@@ -17,6 +17,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :education, :only => :index
   map.resources :service, :only => :index
   map.resources :cross_gallery, :only => :index
+  map.resources :video_gallery, :only => :index
   
   map.namespace :admin do |admin|
     admin.resources :home, :only => :index
