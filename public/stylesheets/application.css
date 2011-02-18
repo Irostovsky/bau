@@ -153,16 +153,16 @@ a{
   margin-top: 3em;
 }
 
-.basement .contacts{
-  width: 430px;
-  margin: 0 auto;
-}
-
+.basement .contacts .address,
 .basement .contacts .phone_email{
-  border-left: 1px solid #ffff00;
-  padding-left: 25px;
+  width: 49%;
 }
 
+/*.basement .contacts .phone_email{
+  border-left: 1px solid #ffff00;
+  padding-left: 45px;
+}
+*/
 
 .contacts{
 	font-family: Century Gothic;
@@ -187,6 +187,7 @@ a{
 .start .contacts .address, .start .contacts .phone_email{
   width: 46%;
 }
+
 
 /******************************************************* HOME ************************************************/
 
