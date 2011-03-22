@@ -14,6 +14,22 @@
 			
 			<div class='text hidden'>
     		<%= textilize(event.body) %>
+    		<h4>Фотоотчет</h4>
+    		<div class='photo_report show_gallery gallery_content'>
+    		  <% for_admin do %>
+    		    <%= link_to 'Добавить/удалить фото', event_photos_path(event) %>
+        	<% end -%>
+
+        	<% content_tag :div, :class => 'photos' do %>
+        		<% event.photos.each do |photo| %>
+        			<% content_tag :div, :class => 'item' do %>
+        				<%= link_to image_tag(photo.avatar.url(:medium)), "#", :class => 'jqModal start_gallery', :photo_id => photo.id %>
+        				
+        			<% end -%>
+        		<% end -%>
+        	<% end -%>
+        	<%= render 'galleries/photo_dialog', :photos => event.photos %>
+    		</div>
 			</div>
   	</li>
   <% end -%>

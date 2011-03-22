@@ -13,12 +13,13 @@ $(document).ready(function(){
 	
 	var myClose=function(hash) {
      hash.w.fadeOut('2000',function(){ 
-       hash.o.remove(); 
-       $('.content_wrapper').css('position', 'relative');
+         hash.o.remove(); 
+         $('.content_wrapper').css('position', 'relative');
        }); 
 	}; 
 	
-	$('#show_photo_dialog').jqm({
+	
+	$('.show_photo_dialog').jqm({
 		onShow: myOpen,
 		onHide: myClose,
 		overlay: 100

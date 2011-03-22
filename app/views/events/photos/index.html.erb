@@ -1,0 +1,20 @@
+<%= content_for :body_class, ' event_photos ' %>
+
+<h3>Фотоотчет для "<%= @event.title %>"</h3>
+
+<%= link_to 'Вернуться к новостям', events_path %>
+<% semantic_form_for([@event, @photo], :html => { :multipart => true }) do |f| %>
+  <%= f.error_messages %>
+	<% f.inputs :title => 'Add Photo(s)' do %>
+		<%= f.input :avatar, :as => :file  %>
+		<%= f.buttons %>
+	<% end -%>
+<% end %>
+
+<% content_tag :div, :class => 'photos' do %>
+	<% @event.photos.each do |photo| %>
+		<% content_tag :div, :class => 'item' do %>
+			<%= image_tag(photo.avatar.url(:medium)) %>
+		<% end -%>
+	<% end -%>
+<% end -%>

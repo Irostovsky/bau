@@ -8,7 +8,11 @@ ActionController::Routing::Routes.draw do |map|
     gallery.resources :photos, :except => :index
   end
   
-  map.resources :events
+  map.resources :events do |event|
+    event.namespace :events do |e|
+      e.resources :photos, :only => [:index, :create, :destroy]
+    end
+  end
   
   map.resources :home, :only => :index
   map.resources :start, :only => :index
