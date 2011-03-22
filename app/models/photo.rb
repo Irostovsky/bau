@@ -1,5 +1,5 @@
 class Photo < ActiveRecord::Base
-  belongs_to :gallery
+  belongs_to :photoable, :polymorphic => true
   
   has_attached_file :avatar, 
   :styles => { :thumb => "80x80>", :medium => '200x200>', :middle => '250x250>', :big => '600x600>', :licen => '800x800>' },

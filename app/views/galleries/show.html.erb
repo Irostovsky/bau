@@ -16,8 +16,8 @@
 				<%= link_to image_tag(photo.avatar.url(:medium)), "#", :class => 'jqModal start_gallery', :photo_id => photo.id %>
 				<% for_admin do %>
           <% content_tag :div do %>
-            <%= link_to image_tag('pencil.png'), edit_gallery_photo_path(photo.gallery, photo) %>
-            <%= link_to(image_tag('delete.png'), gallery_photo_path(photo.gallery, photo), :confirm => 'Удалить фотограйию?', :method => :delete) %>
+            <%= link_to image_tag('pencil.png'), edit_gallery_photo_path(photo.photoable, photo) %>
+            <%= link_to(image_tag('delete.png'), gallery_photo_path(photo.photoable, photo), :confirm => 'Удалить фотограйию?', :method => :delete) %>
           <% end -%>
 				<% end -%>
 			<% end -%>
