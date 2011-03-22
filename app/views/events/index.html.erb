@@ -12,7 +12,9 @@
 		    <%= link_to image_tag('delete.png'), event, :confirm => 'Удалить новость?', :method => :delete %> 
 			<% end -%>
 			
-  		<%= content_tag :div, textilize(event.body), :class => "text hidden" %>
+			<div class='text hidden'>
+    		<%= textilize(event.body) %>
+			</div>
   	</li>
   <% end -%>
 </ul>

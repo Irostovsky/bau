@@ -24,11 +24,11 @@
 					  <%= render :partial => '/layouts/slogan' %>
 					</div>
 				<% end %>
-						
-				<%=  content_tag :div, top_menu, :class => "top_menu" %>
+				
+				<%= content_tag(:div, top_menu, :class => "top_menu") %>
 
   			<% content_tag :div, :class => "top_info" do %>
-  				<%=  yield(:top_info) || image_tag('photo_main.png') %>
+  				<%=  yield(:top_info) || image_tag('photo_main.png') unless current_user %>
   			<% end -%>
 		
 		    <% content_tag :div, :class => 'content_wrapper' do %>
