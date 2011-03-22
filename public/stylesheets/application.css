@@ -8,7 +8,7 @@ body, table, tr, td, th, thead, tbody, h1, h3, form, ul, li {
 
 body {
   font-family: Century Cothic;
-  font-size: 16px;
+  font-size: 17px;
   color: #fff;
   margin: 0 auto;
   padding-bottom: 30px;
@@ -43,7 +43,7 @@ a{
 .pagination .current{
   padding: 3px;
   background-color:#F9ED01;
-  font-size: 20px;
+  font-size: 21px;
   color: #FFF;
   font-width: bold;
 }
@@ -89,18 +89,6 @@ a{
 .top_menu .current_page{
   background: url(/images/active_menu_bg.png)  no-repeat;
   color: #010000;
-}
-
-.plashka{
-  background: url("/images/plashka.png") no-repeat scroll 0 0 transparent;
-  font-size: 2em;
-  height: 313px;
-  padding-top: 112px;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  top: 1em;
-  width: 202px;
 }
 
 /******************************************************TOP INFO*******************************/
@@ -166,7 +154,7 @@ a{
 
 .contacts{
 	font-family: Century Gothic;
-	font-size: 13px;
+	font-size: 14px;
 	color: #676767;
   -moz-box-sizing: border-box;  
   margin-top: 0.1em;
@@ -225,7 +213,7 @@ a{
 .kit_content .products{
 	width: 860px;
 	font-family: Tahoma;
-	font-size: 14px;
+	font-size: 15px;
 }
 
 .kit_content .products .item{
@@ -243,7 +231,7 @@ a{
 }
 
 .kit_content .products .item .description{
-	font-size: 13x;
+	font-size: 14x;
 }
 
 .kit_content .products .item .price_wrapper{
@@ -253,7 +241,7 @@ a{
 .kit_content .products .item .price{
 	padding: 5px;
 	background-color: #F9ED01;
-	font-size: 16px;
+	font-size: 17px;
 	color: #000;
 }
 
@@ -263,7 +251,7 @@ a{
 
 .gallery_content .photos{
 	font-family: Tahoma;
-	font-size: 14px;
+	font-size: 15px;
 }
 
 .gallery_content .photos .item{
@@ -282,7 +270,7 @@ a{
 
 .gallery_content .photos .item .name{
 	font-weight: bold;
-	font-size: 18px;
+	font-size: 19px;
 }
 
 .gallery_content .legend{
@@ -290,14 +278,8 @@ a{
 }
 /**************************************SHOW GALLERY**************/
 
-.show_gallery .photos .item{
-	width: 22%;
-	margin-bottom: 16px;
-	margin-right: 20px;
-}
-
 .show_gallery .gallery_name{
-	font-size: 18px;
+	font-size: 19px;
 }
 
 .show_gallery .close_dialog{
@@ -354,7 +336,7 @@ a{
 /**********************************CONTACT***********************************/
 
 .contact .row{
-	font-size: 20px;
+	font-size: 21px;
 }
 
 .contact .row .label{
@@ -439,7 +421,7 @@ a{
 }
 
 .cross_gallery .ways a{
-  font-size: 20px;
+  font-size: 21px;
   margin-left: 20px;
 }
 
