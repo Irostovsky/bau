@@ -1,16 +1,27 @@
+<%= content_for :body_class, " gallery_content " %>
 
-<% content_for :gallery_content do %>
-	<% content_tag :div, :class => 'photos' do %>
-		<% @photos.each do |photo| %>
-			<% content_tag :div, :class => 'item' do %>
-				<%= image_tag photo.avatar.url(:middle)%>
-				<% content_tag :div do %>
-					<%= content_tag :span, photo.photoable.name, :class => 'name' %>
-					<%= link_to 'Смотреть&nbsp;больше', photo.photoable %>
-				<% end -%>
+<% content_for :top_info do %>
+  <%= image_tag 'photo_for_gallery.png' %>
+<% end -%>
+
+<%= link_to 'New gallery', new_gallery_path if user_signed_in? %>
+
+<% content_tag :div, :class => 'photos' do %>
+	<% @galleries.each do |gallery| %>
+		<% content_tag :div, :class => 'item' do %>
+		  <% image_photo = gallery.photos.first %>
+			<%= link_to(image_tag(image_photo.avatar.url(:middle)), gallery) if image_photo%>
+			<% content_tag :div do %>
+				<%= content_tag :span, gallery.name, :class => 'name' %>
+				<%= link_to 'Смотреть&nbsp;больше', gallery %>
+				<% for_admin do %>
+			    <%= link_to image_tag('pencil.png'), edit_gallery_path(gallery) %>
+			    <%= link_to image_tag('delete.png'), gallery, :confirm => 'Удалить галлерею со всеми фотографиями?', :method => :delete %> 
+			  <% end -%>
 			<% end -%>
 		<% end -%>
 	<% end -%>
 <% end -%>
 
-<%= render :partial => 'content' %>
+
+

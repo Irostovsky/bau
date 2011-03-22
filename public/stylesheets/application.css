@@ -262,19 +262,18 @@ a{
 
 
 .gallery_content .photos{
-	width: 860px;
 	font-family: Tahoma;
 	font-size: 14px;
 }
 
 .gallery_content .photos .item{
-	width: 29%;
-	margin-bottom: 30px;
-	margin-right: 3%;
+	width: 250px;
+	margin: 10px 10px 0 10px;
 	display: inline-block;
 	zoom: 1;
 	*display: inline;
 	vertical-align: top;
+	text-align: center;
 }
 
 .gallery_content .photos .item .date{
