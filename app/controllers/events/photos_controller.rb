@@ -18,6 +18,9 @@ class Events::PhotosController < ApplicationController
   end
 
   def destroy
+    photo = @event.photos.find_by_id params[:id]
+    photo.destroy
+    redirect_to event_photos_path(@event)
   end
 
   private
