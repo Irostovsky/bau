@@ -1,4 +1,9 @@
 <%= content_for :body_class, "cross_gallery" %>
+
+<% content_for :top_info do %>
+  <%= image_tag 'photo_for_gallery.png' %>
+<% end -%>
+
 <div class='ways'>
   <%= link_to "Видео", video_gallery_index_path %>
   <%= link_to "Фото", galleries_path %>

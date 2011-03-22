@@ -4,7 +4,6 @@
 		<% @photos.each do |photo| %>
 			<% content_tag :div, :class => 'item' do %>
 				<%= image_tag photo.avatar.url(:middle)%>
-				<%= content_tag :div, date_format(photo.created_at), :class => 'date' %>
 				<% content_tag :div do %>
 					<%= content_tag :span, photo.photoable.name, :class => 'name' %>
 					<%= link_to 'Смотреть&nbsp;больше', photo.photoable %>
