@@ -256,7 +256,7 @@ a{
 
 .gallery_content .photos .item{
 	width: 250px;
-	margin: 10px 10px 0 10px;
+	margin: 10px;
 	display: inline-block;
 	zoom: 1;
 	*display: inline;
