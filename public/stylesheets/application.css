@@ -439,6 +439,11 @@ a{
   text-align: center;
 }
 
+.cross_gallery .ways a{
+  font-size: 20px;
+  margin-left: 20px;
+}
+
 /****************************event_photos******************/
 
 .event_photos .photos .item{
