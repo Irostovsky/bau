@@ -14,7 +14,7 @@ module ApplicationHelper
 
   def top_menu_data
     [
-      {:name => :description, :path => 'http://npblukraine.com', :title => 'NPBL Ukraine'},
+      {:name => :description, :path => 'http://npblukraine.com/index.php/regions/donezk', :title => 'NPBL Донецк'},
       {:name => :home, :path => home_index_path, :title => 'Академия'},
       {:name => :education, :path => education_index_path, :title => 'Обучение'},
       {:name => :service, :path => service_index_path, :title => 'Услуги'},
