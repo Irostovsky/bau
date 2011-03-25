@@ -16,7 +16,7 @@ body {
 }
 
 .main{
-  width: 1209px;
+  width: 1068px;
   background: url(/images/texture_bg_2.png);
   margin: 0 auto;
   position: relative;
@@ -94,7 +94,7 @@ a{
 /******************************************************TOP INFO*******************************/
 
 .top_info img{
-  width: 1209px;
+  width: 1068px;
 }
 
 
@@ -185,8 +185,8 @@ a{
 } 
 
 .home .licenzies img{
-  width: 220px;
-  margin: 10px;
+  width: 200px;
+  margin: 10px 5px;
 }
 
 .home .licenzies{
@@ -252,10 +252,11 @@ a{
 .gallery_content .photos{
 	font-family: Tahoma;
 	font-size: 15px;
+	text-align: center;
 }
 
 .gallery_content .photos .item{
-	width: 250px;
+	width: 200px;
 	margin: 10px;
 	display: inline-block;
 	zoom: 1;
@@ -340,7 +341,7 @@ a{
 }
 
 .contact .row .label{
-	width: 500px;
+	width: 405px;
 	text-align: right;
 	margin-right: 10px;
 }

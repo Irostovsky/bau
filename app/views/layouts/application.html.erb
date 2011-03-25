@@ -27,7 +27,7 @@
 				<%= content_tag(:div, top_menu, :class => "top_menu") %>
 
   			<% content_tag :div, :class => "top_info" do %>
-  				<%=  yield(:top_info) || image_tag('photo_main.png') unless current_user %>
+  				<%=  yield(:top_info) || image_tag('photo_main.png') %>
   			<% end -%>
 		
 		    <% content_tag :div, :class => 'content_wrapper' do %>

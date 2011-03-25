@@ -1,7 +1,7 @@
 <%= content_for :body_class, " gallery_content " %>
 
 <% content_for :top_info do %>
-  <%= image_tag 'photo_for_gallery.png' %>
+  <%= image_tag 'gallery.jpg' %>
 <% end -%>
 
 <%= link_to 'New gallery', new_gallery_path if user_signed_in? %>
@@ -10,7 +10,7 @@
 	<% @galleries.each do |gallery| %>
 		<% content_tag :div, :class => 'item' do %>
 		  <% image_photo = gallery.photos.first %>
-			<%= link_to(image_tag(image_photo.avatar.url(:middle)), gallery) if image_photo%>
+			<%= link_to(image_tag(image_photo.avatar.url(:medium)), gallery) if image_photo%>
 			<% content_tag :div do %>
 				<%= content_tag :span, gallery.name, :class => 'name' %>
 				<%= link_to 'Смотреть&nbsp;больше', gallery %>

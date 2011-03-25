@@ -1,5 +1,10 @@
 <%= content_for :body_class, " events " %>
 
+<% content_for :top_info do %>
+  <%= image_tag 'events.jpg' %>
+<% end -%>
+
+
 <%= link_to('Add news', new_event_path) if user_signed_in? %>
 
 <ul class='list'>
