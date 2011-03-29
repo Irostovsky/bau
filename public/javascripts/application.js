@@ -95,19 +95,8 @@ $(document).ready(function(){
 		$("#photo_"+$(this).attr('photo_id')).click();
 		return true;
 	});
-		
-	var toggleList = 	function(){
-		var div = $(this).parent().children("div")[0];
-		$(div).toggleClass("hidden");
-		return false;
-	};
-	
-  $(".education .list .item").click(function(){
-    return false;
-  });
-  
-	$(".events .list .item").click(toggleList);
-	
+			  
+			  	
 	if ($(".licenzies").length > 0){
 	  hs.graphicsDir = 'images/graphics/';
   	hs.wrapperClassName = 'wide-border';

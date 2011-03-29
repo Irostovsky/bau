@@ -359,21 +359,16 @@ a{
 
 .events ul li{
   list-style: none;
-  margin-top: 30px;
-}
-
-.events ul a{
-  text-decoration: none;
-}
-
-.events ul a.date{
-  display: block;
-  color: #FAFA00;
+  margin-top: 20px;
 }
 
 .events .text ul li {
   margin: 0 0 0 20px;
   list-style-type: disc;
+}
+
+.event_item h3{
+  margin-top: 10px;
 }
 /***************************************start***********************************************/
 

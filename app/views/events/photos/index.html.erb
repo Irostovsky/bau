@@ -2,7 +2,7 @@
 
 <h3>Фотоотчет для "<%= @event.title %>"</h3>
 
-<%= link_to 'Вернуться к новостям', events_path %>
+<%= link_to 'Обратно на новость', @event %>
 <% semantic_form_for([@event, @photo], :html => { :multipart => true }) do |f| %>
   <%= f.error_messages %>
 	<% f.inputs :title => 'Add Photo(s)' do %>

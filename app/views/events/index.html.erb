@@ -7,35 +7,15 @@
 
 <%= link_to('Add news', new_event_path) if user_signed_in? %>
 
-<ul class='list'>
+<ul>
   <% @events.each do |event| %>
   	<li>
-  		<%= link_to date_format(event.created_at), '#', :class => 'item date' %>
-  		<%= link_to event.title, '#', :class => 'item' %>
+  		<%= link_to event.title, event %>
   		<% for_admin do %>
 		    <%= link_to image_tag('pencil.png'), edit_event_path(event) %>
 		    <%= link_to image_tag('delete.png'), event, :confirm => 'Удалить новость?', :method => :delete %> 
 			<% end -%>
 			
-			<div class='text hidden'>
-    		<%= textilize(event.body) %>
-    		<h4>Фотоотчет</h4>
-    		<div class='photo_report show_gallery gallery_content'>
-    		  <% for_admin do %>
-    		    <%= link_to 'Добавить/удалить фото', event_photos_path(event) %>
-        	<% end -%>
-
-        	<% content_tag :div, :class => 'photos' do %>
-        		<% event.photos.each do |photo| %>
-        			<% content_tag :div, :class => 'item' do %>
-        				<%= link_to image_tag(photo.avatar.url(:medium)), "#", :class => 'jqModal start_gallery', :photo_id => photo.id %>
-        				
-        			<% end -%>
-        		<% end -%>
-        	<% end -%>
-        	<%= render 'galleries/photo_dialog', :photos => event.photos %>
-    		</div>
-			</div>
   	</li>
   <% end -%>
 </ul>
