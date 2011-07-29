@@ -7,14 +7,14 @@ set :repository,  "git@github.com:Irostovsky/bau.git"
 set :deploy_via, :copy
 set :copy_strategy, :export
 
-set :deploy_to, "/var/www/apps/bau"
-set :deploy_by_user, 'root@'
-set :deploy_by_user, 'vmuser@'
+set :deploy_to, "/home/nika/bau"
+set :deploy_by_user, 'nika@'
 
-# set :use_sudo, true
+set :use_sudo, false
 
-# set :ip, '173.203.201.62'
-set :ip, '80.252.241.30'
+# set :ip, '173.203.201.62' 
+# 69.175.35.2 - new
+set :ip, '69.175.35.2'
 role :app, "#{deploy_by_user}#{ip}"
 role :web, "#{deploy_by_user}#{ip}"
 role :db,  "#{deploy_by_user}#{ip}", :primary => true
