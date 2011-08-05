@@ -1,7 +1,7 @@
 # Be sure to restart your server when you modify this file
 
 # Specifies gem version of Rails to use when vendor/rails is not present
-RAILS_GEM_VERSION = '2.3.11' unless defined? RAILS_GEM_VERSION
+RAILS_GEM_VERSION = '2.3.8' unless defined? RAILS_GEM_VERSION
 
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
@@ -23,7 +23,6 @@ Rails::Initializer.run do |config|
   config.gem 'warden'
   config.gem 'devise', :version => '1.0.7'
   config.gem 'formtastic'
-  config.gem 'validation_reflection'
   config.gem 'paperclip', :source => 'http://gemcutter.org'
   config.gem 'will_paginate', :version => '~> 2.3.11', :source => 'http://gemcutter.org'
   config.gem 'RedCloth', :version => '~> 4.2.3', :source => 'http://rubygems.org'
